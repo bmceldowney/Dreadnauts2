@@ -21,31 +21,31 @@ describe('Player', function() {
         player.position.should.be.a('number');
     });
 
-    it('should have a move', function() {
+    it('should have a move stat', function() {
         player.move.should.be.a('number');
     });
 
-    it('should have a strength', function() {
+    it('should have a strength stat', function() {
         player.strength.should.be.a('number');
     });
 
-    it('should have a speed', function() {
+    it('should have a speed stat', function() {
         player.speed.should.be.a('number');
     });
 
-    it('should have a skill', function() {
+    it('should have a skill stat', function() {
         player.skill.should.be.a('number');
     });
 
-    it('should have a armor', function() {
+    it('should have armor', function() {
         player.armor.should.be.a('number');
     });
 
-    it('should have a actions', function() {
+    it('should have some actions', function() {
         player.actions.should.be.an.instanceOf(Array);
     });
 
-    it('should have a abilities', function() {
+    it('should have some abilities', function() {
         player.abilities.should.be.an.instanceOf(Array);
     });
 });
