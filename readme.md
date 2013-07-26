@@ -3,24 +3,17 @@ Dreadnauts
 
 A Dreadball roster builder. Hooray.
 
-Commands
---------
-
-### Build
-```
+Build
+-----
+```conf
     cd /path/to/dreadnauts2
     npm install
 ```
 
-### Run
-```
-    cd /path/to/dreadnauts2
-    npm start
-```
-
-### Test
-```
-    cd /path/to/dreadnauts2
-    npm test
+Commands
+--------
+```conf
+    npm start   # Start an express server on port 3000
+    npm test    # Run unit tests with mocha
 ```
 
