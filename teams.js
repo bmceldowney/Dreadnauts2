@@ -1,6 +1,6 @@
-var Enums = require('./enums.js');
-var Team = require('./team.js');
-var Players = require('./players.js');
+var Enums = require('./enums');
+var Team = require('./team');
+var Players = require('./players');
 
 module.exports = exports = {
 

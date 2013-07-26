@@ -1,5 +1,5 @@
-var Enums = require('./enums.js');
-var Player = require('./player.js');
+var Enums = require('./enums');
+var Player = require('./player');
 var hat = require('hat');
 
 module.exports = exports = function(template) {

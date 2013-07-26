@@ -1,5 +1,6 @@
-var Enums = require('./enums.js');
-var Player = require('./player.js');
+var Enums = require('./enums');
+var Constants = require('./constants');
+var Player = require('./player');
 
 module.exports = exports = {
 
@@ -18,21 +19,7 @@ module.exports = exports = {
                     speed: 4,
                     skill: 4,
                     armor: 4,
-                    actions: [
-                        Enums.Actions.RUN,
-                        Enums.Actions.SPRINT,
-                        Enums.Actions.DASH,
-                        Enums.Actions.EVADE,
-                        Enums.Actions.DODGE,
-                        Enums.Actions.SLAM,
-                        Enums.Actions.SLAMBACK,
-                        Enums.Actions.STOMP,
-                        Enums.Actions.DISTRACT_THE_REF,
-                        Enums.Actions.MOVE_ONTO_THE_PITCH,
-                        Enums.Actions.ARMOR_CHECK,
-                        Enums.Actions.STAND_UP,
-                        Enums.Actions.SUCKER_PUNCH
-                    ]
+                    actions: Constants.GUARD_ACTIONS
                 });
                 break;
 
@@ -45,25 +32,7 @@ module.exports = exports = {
                     speed: 4,
                     skill: 4,
                     armor: 4,
-                    actions: [
-                        Enums.Actions.RUN,
-                        Enums.Actions.SPRINT,
-                        Enums.Actions.DASH,
-                        Enums.Actions.PICK_UP,
-                        Enums.Actions.THROW,
-                        Enums.Actions.CATCH,
-                        Enums.Actions.EVADE,
-                        Enums.Actions.DODGE,
-                        Enums.Actions.SLAM,
-                        Enums.Actions.STEAL,
-                        Enums.Actions.SLAMBACK,
-                        Enums.Actions.STOMP,
-                        Enums.Actions.DISTRACT_THE_REF,
-                        Enums.Actions.MOVE_ONTO_THE_PITCH,
-                        Enums.Actions.ARMOR_CHECK,
-                        Enums.Actions.STAND_UP,
-                        Enums.Actions.SUCKER_PUNCH
-                    ]
+                    actions: Constants.JACK_ACTIONS
                 });
                 break;
 
@@ -76,21 +45,7 @@ module.exports = exports = {
                     speed: 4,
                     skill: 4,
                     armor: 5,
-                    actions: [
-                        Enums.Actions.RUN,
-                        Enums.Actions.SPRINT,
-                        Enums.Actions.DASH,
-                        Enums.Actions.PICK_UP,
-                        Enums.Actions.THROW,
-                        Enums.Actions.CATCH,
-                        Enums.Actions.EVADE,
-                        Enums.Actions.DODGE,
-                        Enums.Actions.STEAL,
-                        Enums.Actions.DISTRACT_THE_REF,
-                        Enums.Actions.MOVE_ONTO_THE_PITCH,
-                        Enums.Actions.ARMOR_CHECK,
-                        Enums.Actions.STAND_UP
-                    ]
+                    actions: Constants.STRIKER_ACTIONS
                 });
                 break;
 
@@ -103,21 +58,7 @@ module.exports = exports = {
                     speed: 4,
                     skill: 5,
                     armor: 4,
-                    actions: [
-                        Enums.Actions.RUN,
-                        Enums.Actions.SPRINT,
-                        Enums.Actions.DASH,
-                        Enums.Actions.EVADE,
-                        Enums.Actions.DODGE,
-                        Enums.Actions.SLAM,
-                        Enums.Actions.SLAMBACK,
-                        Enums.Actions.STOMP,
-                        Enums.Actions.DISTRACT_THE_REF,
-                        Enums.Actions.MOVE_ONTO_THE_PITCH,
-                        Enums.Actions.ARMOR_CHECK,
-                        Enums.Actions.STAND_UP,
-                        Enums.Actions.SUCKER_PUNCH
-                    ]
+                    actions: Constants.GUARD_ACTIONS
                 });
                 break;
 
@@ -130,25 +71,7 @@ module.exports = exports = {
                     speed: 3,
                     skill: 4,
                     armor: 4,
-                    actions: [
-                        Enums.Actions.RUN,
-                        Enums.Actions.SPRINT,
-                        Enums.Actions.DASH,
-                        Enums.Actions.PICK_UP,
-                        Enums.Actions.THROW,
-                        Enums.Actions.CATCH,
-                        Enums.Actions.EVADE,
-                        Enums.Actions.DODGE,
-                        Enums.Actions.SLAM,
-                        Enums.Actions.STEAL,
-                        Enums.Actions.SLAMBACK,
-                        Enums.Actions.STOMP,
-                        Enums.Actions.DISTRACT_THE_REF,
-                        Enums.Actions.MOVE_ONTO_THE_PITCH,
-                        Enums.Actions.ARMOR_CHECK,
-                        Enums.Actions.STAND_UP,
-                        Enums.Actions.SUCKER_PUNCH
-                    ]
+                    actions: Constants.JACK_ACTIONS
                 });
                 break;
 
@@ -161,21 +84,7 @@ module.exports = exports = {
                     speed: 3,
                     skill: 5,
                     armor: 4,
-                    actions: [
-                        Enums.Actions.RUN,
-                        Enums.Actions.SPRINT,
-                        Enums.Actions.DASH,
-                        Enums.Actions.EVADE,
-                        Enums.Actions.DODGE,
-                        Enums.Actions.SLAM,
-                        Enums.Actions.SLAMBACK,
-                        Enums.Actions.STOMP,
-                        Enums.Actions.DISTRACT_THE_REF,
-                        Enums.Actions.MOVE_ONTO_THE_PITCH,
-                        Enums.Actions.ARMOR_CHECK,
-                        Enums.Actions.STAND_UP,
-                        Enums.Actions.SUCKER_PUNCH
-                    ]
+                    actions: Constants.GUARD_ACTIONS
                 });
                 break;
 
@@ -188,21 +97,7 @@ module.exports = exports = {
                     speed: 3,
                     skill: 5,
                     armor: 5,
-                    actions: [
-                        Enums.Actions.RUN,
-                        Enums.Actions.SPRINT,
-                        Enums.Actions.DASH,
-                        Enums.Actions.PICK_UP,
-                        Enums.Actions.THROW,
-                        Enums.Actions.CATCH,
-                        Enums.Actions.EVADE,
-                        Enums.Actions.DODGE,
-                        Enums.Actions.STEAL,
-                        Enums.Actions.DISTRACT_THE_REF,
-                        Enums.Actions.MOVE_ONTO_THE_PITCH,
-                        Enums.Actions.ARMOR_CHECK,
-                        Enums.Actions.STAND_UP
-                    ]
+                    actions: Constants.STRIKER_ACTIONS
                 });
                 break;
 
@@ -215,21 +110,7 @@ module.exports = exports = {
                     speed: 5,
                     skill: 4,
                     armor: 4,
-                    actions: [
-                        Enums.Actions.RUN,
-                        Enums.Actions.SPRINT,
-                        Enums.Actions.DASH,
-                        Enums.Actions.EVADE,
-                        Enums.Actions.DODGE,
-                        Enums.Actions.SLAM,
-                        Enums.Actions.SLAMBACK,
-                        Enums.Actions.STOMP,
-                        Enums.Actions.DISTRACT_THE_REF,
-                        Enums.Actions.MOVE_ONTO_THE_PITCH,
-                        Enums.Actions.ARMOR_CHECK,
-                        Enums.Actions.STAND_UP,
-                        Enums.Actions.SUCKER_PUNCH
-                    ],
+                    actions: Constants.GUARD_ACTIONS,
                     abilities: [
                         Enums.Abilities.STEADY
                     ]
@@ -245,25 +126,7 @@ module.exports = exports = {
                     speed: 5,
                     skill: 4,
                     armor: 4,
-                    actions: [
-                        Enums.Actions.RUN,
-                        Enums.Actions.SPRINT,
-                        Enums.Actions.DASH,
-                        Enums.Actions.PICK_UP,
-                        Enums.Actions.THROW,
-                        Enums.Actions.CATCH,
-                        Enums.Actions.EVADE,
-                        Enums.Actions.DODGE,
-                        Enums.Actions.SLAM,
-                        Enums.Actions.STEAL,
-                        Enums.Actions.SLAMBACK,
-                        Enums.Actions.STOMP,
-                        Enums.Actions.DISTRACT_THE_REF,
-                        Enums.Actions.MOVE_ONTO_THE_PITCH,
-                        Enums.Actions.ARMOR_CHECK,
-                        Enums.Actions.STAND_UP,
-                        Enums.Actions.SUCKER_PUNCH
-                    ]
+                    actions: Constants.JACK_ACTIONS
                 });
                 break;
 
@@ -276,21 +139,7 @@ module.exports = exports = {
                     speed: 5,
                     skill: 4,
                     armor: 5,
-                    actions: [
-                        Enums.Actions.RUN,
-                        Enums.Actions.SPRINT,
-                        Enums.Actions.DASH,
-                        Enums.Actions.PICK_UP,
-                        Enums.Actions.THROW,
-                        Enums.Actions.CATCH,
-                        Enums.Actions.EVADE,
-                        Enums.Actions.DODGE,
-                        Enums.Actions.STEAL,
-                        Enums.Actions.DISTRACT_THE_REF,
-                        Enums.Actions.MOVE_ONTO_THE_PITCH,
-                        Enums.Actions.ARMOR_CHECK,
-                        Enums.Actions.STAND_UP
-                    ]
+                    actions: Constants.STRIKER_ACTIONS
                 });
                 break;
         }
