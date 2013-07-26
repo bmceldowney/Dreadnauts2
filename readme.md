@@ -6,15 +6,21 @@ A Dreadball roster builder. Hooray.
 Commands
 --------
 
-**Build:**
+### Build
+```
     cd /path/to/dreadnauts2
     npm install
+```
 
-**Run:**
+### Run
+```
     cd /path/to/dreadnauts2
     npm start
+```
 
-**Test:**
+### Test
+```
     cd /path/to/dreadnauts2
     npm test
+```
 
