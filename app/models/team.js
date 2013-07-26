@@ -1,4 +1,4 @@
-var Enums = require('./enums');
+var Enums = require('../enums');
 var Player = require('./player');
 var hat = require('hat');
 

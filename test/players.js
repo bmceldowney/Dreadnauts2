@@ -1,7 +1,7 @@
-var Enums = require('../enums');
-var Constants = require('../constants');
-var Player = require('../player');
-var Players = require('../players');
+var Enums = require('../app/enums');
+var Constants = require('../app/constants');
+var Player = require('../app/models/player');
+var Players = require('../app/builders/players');
 var should = require('should');
 
 function testPlayer(subject, race, position, move, strength, speed, skill, armor) {

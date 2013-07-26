@@ -1,5 +1,5 @@
 var should = require('should');
-var Player = require('../player');
+var Player = require('../app/models/player');
 
 describe('Player', function() {
 

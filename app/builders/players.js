@@ -1,6 +1,6 @@
-var Enums = require('./enums');
-var Constants = require('./constants');
-var Player = require('./player');
+var Enums = require('../enums');
+var Constants = require('../constants');
+var Player = require('../models/player');
 
 module.exports = exports = {
 
