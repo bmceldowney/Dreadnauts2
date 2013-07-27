@@ -7,8 +7,18 @@ html
     meta(http-equiv="cleartype", content="on")
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    div(role="main")
+
+    header.clearfix(role="header")
+        h1.huge-text.header-text Dreadnauts
+            small.tiny-text v.0.1
+        fieldset.header-controls
+            button.header-menu menu
+
+    div.clearfix(role="main")
         block content
+
+    footer.clearfix(role="footer")
+
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
     script(src='/javascripts/jquery.hammer.js')
     script(src='/javascripts/main.js')

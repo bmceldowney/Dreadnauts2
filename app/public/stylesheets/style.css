@@ -1,11 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Denk+One);
 
 body {
-    background: rgba(60, 69, 77, 1);
+    background-color: rgba(60, 69, 77, 1);
+    background-attachment: fixed;
+    background-size: cover;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     -webkit-user-select: none;
 }
 
@@ -15,16 +16,79 @@ body * {
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 16px;
+}
+
 a {
   color: rgba(31, 161, 209, 1);
 }
 
-[role="main"] {
+article {
+    background-color: #efefef;
+    color: #222;
+    padding: 16px;
+    margin: 0 0 1px 0;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+[role="header"],
+[role="main"],
+[role="footer"] {
+    color: #efefef;
+    margin: 0;
     overflow: visible;
-    padding: 20px;
+    padding: 0 4px;
     width: 100%;
 }
 
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0px;
+}
+
+.header-text {
+    float: left;
+    margin: 0;
+}
+
+.header-controls {
+    float: right;
+}
+
+/** typography */
+h1, .huge-text {
+    font: 2.6rem 'Denk One', sans-serif;
+}
+
+h2, .large-text {
+    font: 1.8rem 'Denk One', sans-serif;
+}
+
+body, h3, .normal-text {
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h4, .small-text {
+    font: .8rem 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h5, h6, small, .tiny-text {
+    font: .6rem 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.centered {
+    text-align: center;
+}
+
+/** buttons */
 .action {
     background-color: rgba(31, 161, 209, 1);
     border: none;
@@ -73,7 +137,6 @@ a {
 }
 
 .action.rock {
-    /*opacity: 0;*/
     background-color: rgba(255, 255, 255, 0);
     color: rgba(255, 255, 255, 0);
     -moz-transform: scale3d(4.6, 4.6, 0);
@@ -88,4 +151,19 @@ a {
 @-webkit-keyframes spin {
     0% { -webkit-transform: rotateZ(0deg); }
     100% { -webkit-transform: rotateZ(360deg); }
+}
+
+@media screen and (orientation:portrait) {
+
+    body {
+        background-image: url(/images/bkg_body_portrait.jpg);
+    }
+}
+
+@media screen and (orientation:landscape) {
+
+    body {
+        background-image: url(/images/bkg_body_landscape.jpg);
+        background-position: center center;
+    }
 }
