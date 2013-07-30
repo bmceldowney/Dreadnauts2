@@ -2,6 +2,7 @@
 
 body {
     background-color: rgba(40, 50, 51, 1);
+    margin: 8px 4px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -193,71 +194,6 @@ h5, h6, small, .tiny-text {
 
 .player-stat-label {
     display: block;
-}
-
-/** buttons */
-.action {
-    background-color: rgba(31, 161, 209, 1);
-    border: none;
-    border-radius: 50%;
-    color: white;
-    cursor: pointer;
-    font: 2.6em 'Racing Sans One', sans-serif;
-    height: 84px;
-    margin: 2px;
-    outline: none;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    -moz-transition: 200ms;
-    -webkit-transition: 200ms;
-    transition: 200ms;
-    width: 84px;
-}
-
-.action .after {
-    border: 4px dotted rgba(256, 256, 256, .6);
-    border-radius: 50%;
-    bottom: 3px;
-    display: block;
-    left: 3px;
-    position: absolute;
-    right: 3px;
-    top: 3px;
-    -moz-transition: 200ms;
-    -webkit-transition: 200ms;
-    transition: 200ms;
-}
-
-.action.on {
-    background-color: rgba(117, 204, 121, .7);
-    -moz-transform: scale3d(1.6, 1.6, 0);
-    -webkit-transform: scale3d(1.6, 1.6, 0);
-    transform: scale3d(1.6, 1.6, 0);
-    z-index: 2;
-}
-
-.action.on .after {
-    -moz-animation: spin 2.4s linear;
-    -webkit-animation: spin 2.4s linear infinite;
-    animation: spin 2.4s linear;
-}
-
-.action.rock {
-    background-color: rgba(255, 255, 255, 0);
-    color: rgba(255, 255, 255, 0);
-    -moz-transform: scale3d(4.6, 4.6, 0);
-    -webkit-transform: scale3d(4.6, 4.6, 0);
-    transform: scale3d(4.6, 4.6, 0);
-}
-
-.action.rock .after {
-    border-color: rgba(255, 255, 255, 0);
-}
-
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotateZ(0deg); }
-    100% { -webkit-transform: rotateZ(360deg); }
 }
 
 @media screen and (orientation:portrait) {
