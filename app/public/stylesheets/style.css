@@ -1,9 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Denk+One);
+@import url(http://fonts.googleapis.com/css?family=Racing+Sans+One|Roboto:400,400italic,700);
 
 body {
-    background-color: rgba(60, 69, 77, 1);
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: rgba(40, 50, 51, 1);
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -17,6 +15,7 @@ body * {
 }
 
 h1, h2, h3, h4, h5, h6, p {
+    font-weight: normal;
     margin: 0 0 16px;
 }
 
@@ -24,8 +23,8 @@ a {
   color: rgba(31, 161, 209, 1);
 }
 
-article {
-    background-color: #efefef;
+article, table {
+    background-color: rgba(239, 239, 239, 1);
     color: #222;
     padding: 16px;
     margin: 0 0 1px 0;
@@ -35,6 +34,32 @@ fieldset {
     border: 0;
     padding: 0;
     margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tbody {
+    border-bottom: 1px solid #222;
+}
+
+tbody:last-child {
+    border: none;
+}
+
+[role="background"] {
+    background-attachment: fixed;
+    background-color: rgba(60, 69, 77, 1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    height: 140%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 [role="header"],
@@ -65,27 +90,109 @@ fieldset {
 
 /** typography */
 h1, .huge-text {
-    font: 2.6rem 'Denk One', sans-serif;
+    font: 2.4rem 'Racing Sans One', sans-serif;
 }
 
 h2, .large-text {
-    font: 1.8rem 'Denk One', sans-serif;
+    font: 1.6rem 'Racing Sans One', sans-serif;
 }
 
 body, h3, .normal-text {
-    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: 14px 'Roboto', Helvetica, Arial, sans-serif;
 }
 
 h4, .small-text {
-    font: .8rem 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: .8rem 'Roboto', Helvetica, Arial, sans-serif;
 }
 
 h5, h6, small, .tiny-text {
-    font: .6rem 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: .6rem 'Roboto', Helvetica, Arial, sans-serif;
 }
 
 .centered {
     text-align: center;
+}
+
+/** rosters */
+
+.player-number, .player-stat {
+    text-align: center;
+    vertical-align: bottom;
+    width: 16%;
+}
+
+.player-position, .player-name {
+    padding: 4px;
+}
+
+.player-heading {
+    height: 28px;
+    overflow: hidden;
+    padding: 0 64px 0 96px;
+    position: relative;
+}
+
+.player-position {
+    left: 0;
+    position: absolute;
+    top: 4px;
+    z-index: 2;
+}
+
+.player-position span {
+    color: rgba(0, 0, 0, .7);
+    font-style: italic;
+    left: 8px;
+    position: absolute;
+    text-shadow: 0px 1px rgba(255, 255, 255, .3);
+    top: 0;
+    z-index: 2;
+}
+
+.player-position::after {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .6);
+    content: "";
+    display: block;
+    height: 20px;
+    left: -8px;
+    position: absolute;
+    top: 0px;
+    width: 96px;
+    -moz-transform: skewX(-30deg);
+    -webkit-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+}
+
+.player-position.guard::after {
+    background-color: crimson;
+}
+
+.player-position.jack::after {
+    background-color: goldenrod;
+}
+
+.player-position.striker::after {
+    background-color: skyblue;
+}
+
+.player-name {
+    font-style: italic;
+}
+
+.player-race {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.player-stat {
+    line-height: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+.player-stat-label {
+    display: block;
 }
 
 /** buttons */
@@ -95,7 +202,7 @@ h5, h6, small, .tiny-text {
     border-radius: 50%;
     color: white;
     cursor: pointer;
-    font: 2.6em 'Denk One', sans-serif;
+    font: 2.6em 'Racing Sans One', sans-serif;
     height: 84px;
     margin: 2px;
     outline: none;
@@ -155,14 +262,15 @@ h5, h6, small, .tiny-text {
 
 @media screen and (orientation:portrait) {
 
-    body {
+    [role="background"] {
         background-image: url(/images/bkg_body_portrait.jpg);
+        background-position: top center;
     }
 }
 
 @media screen and (orientation:landscape) {
 
-    body {
+    [role="background"] {
         background-image: url(/images/bkg_body_landscape.jpg);
         background-position: center center;
     }

@@ -11,6 +11,6 @@ $('body').hammer().on('release', 'button.action', function(evt) {
     var target = $(this);
 
     target.addClass('rock').one('transitionend webkitTransitionEnd oTransitionEnd', function() {
-        target.css('visibility', 'hidden');
+        target.remove();
     });
 });

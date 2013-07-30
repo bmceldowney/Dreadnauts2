@@ -1,0 +1,94 @@
+extends layout
+
+block content
+
+    article.team
+        h2 Trontek 49ers
+
+    table(cellpadding="0", cellspacing="0").roster
+        tbody.player
+            tr
+                td(colspan="6").player-heading
+                    span.player-name George Washington
+                    span.player-position.guard
+                        span Guard
+                    span.player-race.tiny-text Human
+            tr
+                td.player-number.large-text 01
+                td.player-stat 5
+                    span.player-stat-label.tiny-text move
+                td.player-stat 4
+                    span.player-stat-label.tiny-text strength
+                td.player-stat 4
+                    span.player-stat-label.tiny-text speed
+                td.player-stat 4
+                    span.player-stat-label.tiny-text skill
+                td.player-stat 4
+                    span.player-stat-label.tiny-text armor
+        tbody.player.active
+            tr
+                td(colspan="6").player-heading
+                    span.player-name John Adams
+                    span.player-position.jack
+                        span Jack
+                    span.player-race.tiny-text Human
+            tr
+                td.player-number.large-text 02
+                td.player-stat 5
+                    span.player-stat-label.tiny-text move
+                td.player-stat 4
+                    span.player-stat-label.tiny-text strength
+                td.player-stat 4
+                    span.player-stat-label.tiny-text speed
+                td.player-stat 4
+                    span.player-stat-label.tiny-text skill
+                td.player-stat 4
+                    span.player-stat-label.tiny-text armor
+        tbody.player
+            tr
+                td(colspan="6").player-heading.striker
+                    span.player-name Thomas Jefferson
+                    span.player-position.striker
+                        span Striker
+                    span.player-race.tiny-text Human
+            tr
+                td.player-number.large-text 03
+                td.player-stat 5
+                    span.player-stat-label.tiny-text move
+                td.player-stat 4
+                    span.player-stat-label.tiny-text strength
+                td.player-stat 4
+                    span.player-stat-label.tiny-text speed
+                td.player-stat 4
+                    span.player-stat-label.tiny-text skill
+                td.player-stat 5
+                    span.player-stat-label.tiny-text armor
+
+    article
+        p.huge-text .huge-text
+            br 
+            | .huge-text
+
+        p.large-text .large-text
+            br
+            | .large-text
+
+        p .normal-text
+            br
+            strong .normal-text
+
+        p.small-text .small-text
+            br
+            em .small-text
+
+        p.tiny-text .tiny-text
+            br
+            | .tiny-text
+
+    article.centered
+        button.action 01
+            span.after
+        button.action 02
+            span.after
+        button.action 03
+            span.after
