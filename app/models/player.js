@@ -6,9 +6,10 @@ module.exports = exports = function(template) {
     var template = template || {};
     
     this.id = template.id || hat();
-    this.name = template.name || '';
+    this.name = template.name || 'Nobody...';
     this.race = template.race || -1;
     this.position = template.position || -1;
+    this.number = template.number || '00';
     this.move = template.move || -1;
     this.strength = template.strength || -1;
     this.speed = template.speed || -1;

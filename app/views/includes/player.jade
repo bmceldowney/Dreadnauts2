@@ -1,0 +1,11 @@
+if player
+      dl.player.clearfix
+            dt.player-name.em: dfn= player.name
+            dd.player-race.tiny-text= Constants[player.race]
+            dd(class="player-position #{Constants[player.position]}"): span= Constants[player.position]
+            dd.player-number.large-text= player.number
+            dd.player-move.text-center= player.move
+            dd.player-strength.text-center= player.strength
+            dd.player-speed.text-center= player.speed
+            dd.player-skill.text-center= player.skill
+            dd.player-armor.text-center= player.armor

@@ -5,49 +5,10 @@ block content
     article.team
 
         header.team-name
-            h2 Trontek 49ers
+            h2= team.name
 
-        section.roster
-
-            header.roster-header.clearfix
-                h3.tiny-text.text-center Move
-                h3.tiny-text.text-center Strength
-                h3.tiny-text.text-center Speed
-                h3.tiny-text.text-center Skill
-                h3.tiny-text.text-center Armor
-
-            dl.player.clearfix
-                dt.player-name.em: dfn George Washington
-                dd.player-race.tiny-text Human
-                dd.player-position.guard: span Guard
-                dd.player-number.large-text 01
-                dd.player-move.text-center 5
-                dd.player-strength.text-center 4
-                dd.player-speed.text-center 4
-                dd.player-skill.text-center 4
-                dd.player-armor.text-center 4
-
-            dl.player.clearfix
-                dt.player-name.em: dfn John Adams
-                dd.player-race.tiny-text Human
-                dd.player-position.jack: span Jack
-                dd.player-number.large-text 02
-                dd.player-move.text-center 5
-                dd.player-strength.text-center 4
-                dd.player-speed.text-center 4
-                dd.player-skill.text-center 4
-                dd.player-armor.text-center 4
-
-            dl.player.clearfix
-                dt.player-name.em: dfn Thomas Jefferson
-                dd.player-race.tiny-text Human
-                dd.player-position.striker: span Striker
-                dd.player-number.large-text 03
-                dd.player-move.text-center 5
-                dd.player-strength.text-center 4
-                dd.player-speed.text-center 4
-                dd.player-skill.text-center 4
-                dd.player-armor.text-center 5
+        - var roster = team.players
+        include includes/roster
 
     article
         section

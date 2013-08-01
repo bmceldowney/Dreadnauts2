@@ -11,6 +11,21 @@ function define(name, value) {
     });
 }
 
+define(Enums.Teams.TRONTEK_49ERS, 'TronTek 49ers');
+define(Enums.Teams.GREENMOON_SMACKERS, 'Greenmoon Smackers');
+define(Enums.Teams.SKITTERSNEAK_STEALERS, 'Skittersneak Stealers');
+define(Enums.Teams.MIDGARD_DELVERS, 'Midgard Delvers');
+
+define(Enums.Positions.GUARD, 'guard');
+define(Enums.Positions.JACK, 'jack');
+define(Enums.Positions.STRIKER, 'striker');
+
+define(Enums.Races.HUMAN, 'human');
+define(Enums.Races.ORX, 'orx');
+define(Enums.Races.GOBLIN, 'goblin');
+define(Enums.Races.VEERMYN, 'veer-myn');
+define(Enums.Races.FORGEFATHER, 'forge father');
+
 define('GUARD_ACTIONS', [
     Enums.Actions.RUN,
     Enums.Actions.SPRINT,

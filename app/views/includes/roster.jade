@@ -1,0 +1,12 @@
+if roster
+    section.roster
+
+        header.roster-header.clearfix
+            h3.tiny-text.text-center Move
+            h3.tiny-text.text-center Strength
+            h3.tiny-text.text-center Speed
+            h3.tiny-text.text-center Skill
+            h3.tiny-text.text-center Armor
+
+        -each player in roster
+            include player

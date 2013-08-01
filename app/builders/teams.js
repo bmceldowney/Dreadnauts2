@@ -1,6 +1,7 @@
+var Constants = require('../constants');
 var Enums = require('../enums');
-var Team = require('../team');
-var Players = require('../models/players');
+var Team = require('../models/team');
+var Players = require('./players');
 
 module.exports = exports = {
 
@@ -12,6 +13,7 @@ module.exports = exports = {
 
             case Enums.Teams.TRONTEK_49ERS:
                 result = new Team();
+                result.name = Constants[Enums.Teams.TRONTEK_49ERS];
                 result.add(Players.build(Enums.Players.TRONTEK_49ERS_GUARD));
                 result.add(Players.build(Enums.Players.TRONTEK_49ERS_GUARD));
                 result.add(Players.build(Enums.Players.TRONTEK_49ERS_JACK));
@@ -24,6 +26,7 @@ module.exports = exports = {
 
             case Enums.Teams.GREENMOON_SMACKERS:
                 result = new Team();
+                result.name = Constants[Enums.Teams.GREENMOON_SMACKERS];
                 result.add(Players.build(Enums.Players.GREENMOON_SMACKERS_GUARD));
                 result.add(Players.build(Enums.Players.GREENMOON_SMACKERS_GUARD));
                 result.add(Players.build(Enums.Players.GREENMOON_SMACKERS_GUARD));
@@ -36,6 +39,7 @@ module.exports = exports = {
 
             case Enums.Teams.SKITTERSNEAK_STEALERS:
                 result = new Team();
+                result.name = Constants[Enums.Teams.SKITTERSNEAK_STEALERS];
                 result.add(Players.build(Enums.Players.SKITTERSNEAK_STEALERS_GUARD));
                 result.add(Players.build(Enums.Players.SKITTERSNEAK_STEALERS_GUARD));
                 result.add(Players.build(Enums.Players.SKITTERSNEAK_STEALERS_STRIKER));
@@ -48,6 +52,7 @@ module.exports = exports = {
 
             case Enums.Teams.MIDGARD_DELVERS:
                 result = new Team();
+                result.name = Constants[Enums.Teams.MIDGARD_DELVERS];
                 result.add(Players.build(Enums.Players.MIDGARD_DELVERS_GUARD));
                 result.add(Players.build(Enums.Players.MIDGARD_DELVERS_GUARD));
                 result.add(Players.build(Enums.Players.MIDGARD_DELVERS_GUARD));
