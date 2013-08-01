@@ -2,13 +2,14 @@ extends layout
 
 block content
 
-    article.team
+    if team
+        article.team
 
-        header.team-name
-            h2= team.name
+            header.team-name
+                h2= team.name
 
-        - var roster = team.players
-        include includes/roster
+            - var roster = team.players
+            include includes/roster
 
     article
         section
