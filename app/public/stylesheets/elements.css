@@ -1,0 +1,61 @@
+@import url(http://fonts.googleapis.com/css?family=Racing+Sans+One|Roboto:400,400italic,700);
+
+body {
+    background-color: rgba(40, 50, 51, 1);
+    background-size: cover;
+    margin: 8px 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+}
+
+body * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-weight: normal;
+    margin: 0 0 16px;
+}
+
+a {
+  color: rgba(31, 161, 209, 1);
+}
+
+header, section {
+    background-color: rgba(239, 239, 239, 1);
+    color: #222;
+    padding: 16px;
+    margin: 0 0 1px 0;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+dl, dd, dt, ul, ol, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (orientation:portrait) {
+
+    body {
+        background-image: url(/images/bkg_body_portrait.jpg);
+        background-position: top center;
+    }
+}
+
+@media screen and (orientation:landscape) {
+
+    body {
+        background-image: url(/images/bkg_body_landscape.jpg);
+        background-position: center center;
+    }
+}

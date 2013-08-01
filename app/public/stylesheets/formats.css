@@ -1,0 +1,51 @@
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+/** typography */
+h1, .huge-text {
+    font: 2.4rem 'Racing Sans One', sans-serif;
+}
+
+h2, .large-text {
+    font: 1.6rem 'Racing Sans One', sans-serif;
+}
+
+body, h3, .normal-text {
+    font: 14px 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+h4, .small-text {
+    font: .8rem 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+h5, h6, small, .tiny-text {
+    font: .6rem 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.em {
+    font-style: italic;
+}
+
+.strong {
+    font-weight: 700;
+}

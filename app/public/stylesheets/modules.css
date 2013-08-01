@@ -1,0 +1,122 @@
+[role="header"],
+[role="main"],
+[role="footer"] {
+    background-color: transparent;
+    color: #efefef;
+    margin: 0;
+    overflow: visible;
+    padding: 0 0;
+    width: 100%;
+}
+
+[role="header"] {
+    padding: 0 8px;
+}
+
+.header-text {
+    color: white;
+    float: left;
+    margin: 0;
+}
+
+.header-controls {
+    float: right;
+}
+
+/** rosters */
+.roster {
+    background-color: transparent;
+    padding: 0;
+}
+
+.roster-header,
+.player {
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 4px 8px;
+    position: relative;
+}
+
+.roster-header::before {
+    content: "";
+    display: block;
+    float: left;
+    height: 1px;
+    width: 20%;
+}
+
+.roster-header h3 {
+    float: left;
+    margin: 0;
+    width: 16%;
+}
+
+.player-name {
+    margin-bottom: 4px;
+    padding-left: 96px;
+}
+
+.player-position {
+    left: 0;
+    position: absolute;
+    top: 4px;
+    z-index: 2;
+}
+
+.player-position span {
+    color: rgba(0, 0, 0, .7);
+    font-style: italic;
+    left: 8px;
+    position: absolute;
+    text-shadow: 0px 1px rgba(255, 255, 255, .3);
+    top: 0;
+    z-index: 2;
+}
+
+.player-position::after {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .6);
+    content: "";
+    display: block;
+    height: 20px;
+    left: -8px;
+    position: absolute;
+    top: 0px;
+    width: 96px;
+    -moz-transform: skewX(-30deg);
+    -webkit-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+}
+
+.player-position.guard::after {
+    background-color: crimson;
+}
+
+.player-position.jack::after {
+    background-color: goldenrod;
+}
+
+.player-position.striker::after {
+    background-color: skyblue;
+}
+
+.player-race {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.player-number {
+    float: left;
+    padding-left: 0;
+    width: 20%;
+}
+
+.player-move,
+.player-strength,
+.player-speed,
+.player-skill,
+.player-armor {
+    float: left;
+    padding: 8px 0 8px 4px;
+    width: 16%;
+}

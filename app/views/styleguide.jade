@@ -3,179 +3,70 @@ extends layout
 block content
 
     article.team
-        h2 Trontek 49ers
 
-    table(cellpadding="0", cellspacing="0").roster
-        tbody.player
-            tr
-                td(colspan="6").player-heading
-                    span.player-name George Washington
-                    span.player-position.guard
-                        span Guard
-                    span.player-race.tiny-text Human
-            tr
-                td.player-number.large-text 01
-                td.player-stat 5
-                    span.player-stat-label.tiny-text move
-                td.player-stat 4
-                    span.player-stat-label.tiny-text strength
-                td.player-stat 4
-                    span.player-stat-label.tiny-text speed
-                td.player-stat 4
-                    span.player-stat-label.tiny-text skill
-                td.player-stat 4
-                    span.player-stat-label.tiny-text armor
-        tbody.player.active
-            tr
-                td(colspan="6").player-heading
-                    span.player-name John Adams
-                    span.player-position.guard
-                        span Guard
-                    span.player-race.tiny-text Human
-            tr
-                td.player-number.large-text 02
-                td.player-stat 5
-                    span.player-stat-label.tiny-text move
-                td.player-stat 4
-                    span.player-stat-label.tiny-text strength
-                td.player-stat 4
-                    span.player-stat-label.tiny-text speed
-                td.player-stat 4
-                    span.player-stat-label.tiny-text skill
-                td.player-stat 4
-                    span.player-stat-label.tiny-text armor
-        tbody.player
-            tr
-                td(colspan="6").player-heading
-                    span.player-name Thomas Jefferson
-                    span.player-position.jack
-                        span Jack
-                    span.player-race.tiny-text Human
-            tr
-                td.player-number.large-text 03
-                td.player-stat 5
-                    span.player-stat-label.tiny-text move
-                td.player-stat 4
-                    span.player-stat-label.tiny-text strength
-                td.player-stat 4
-                    span.player-stat-label.tiny-text speed
-                td.player-stat 4
-                    span.player-stat-label.tiny-text skill
-                td.player-stat 4
-                    span.player-stat-label.tiny-text armor
-        tbody.player
-            tr
-                td(colspan="6").player-heading
-                    span.player-name James Madison
-                    span.player-position.jack
-                        span Jack
-                    span.player-race.tiny-text Human
-            tr
-                td.player-number.large-text 04
-                td.player-stat 5
-                    span.player-stat-label.tiny-text move
-                td.player-stat 4
-                    span.player-stat-label.tiny-text strength
-                td.player-stat 4
-                    span.player-stat-label.tiny-text speed
-                td.player-stat 4
-                    span.player-stat-label.tiny-text skill
-                td.player-stat 4
-                    span.player-stat-label.tiny-text armor
-        tbody.player
-            tr
-                td(colspan="6").player-heading
-                    span.player-name James Monroe
-                    span.player-position.jack
-                        span Jack
-                    span.player-race.tiny-text Human
-            tr
-                td.player-number.large-text 05
-                td.player-stat 5
-                    span.player-stat-label.tiny-text move
-                td.player-stat 4
-                    span.player-stat-label.tiny-text strength
-                td.player-stat 4
-                    span.player-stat-label.tiny-text speed
-                td.player-stat 4
-                    span.player-stat-label.tiny-text skill
-                td.player-stat 4
-                    span.player-stat-label.tiny-text armor
-        tbody.player
-            tr
-                td(colspan="6").player-heading
-                    span.player-name John Q. Adams
-                    span.player-position.striker
-                        span Striker
-                    span.player-race.tiny-text Human
-            tr
-                td.player-number.large-text 06
-                td.player-stat 5
-                    span.player-stat-label.tiny-text move
-                td.player-stat 4
-                    span.player-stat-label.tiny-text strength
-                td.player-stat 4
-                    span.player-stat-label.tiny-text speed
-                td.player-stat 4
-                    span.player-stat-label.tiny-text skill
-                td.player-stat 5
-                    span.player-stat-label.tiny-text armor
-        tbody.player
-            tr
-                td(colspan="6").player-heading
-                    span.player-name Andrew Jackson
-                    span.player-position.striker
-                        span Striker
-                    span.player-race.tiny-text Human
-            tr
-                td.player-number.large-text 07
-                td.player-stat 5
-                    span.player-stat-label.tiny-text move
-                td.player-stat 4
-                    span.player-stat-label.tiny-text strength
-                td.player-stat 4
-                    span.player-stat-label.tiny-text speed
-                td.player-stat 4
-                    span.player-stat-label.tiny-text skill
-                td.player-stat 5
-                    span.player-stat-label.tiny-text armor
-        tbody.player
-            tr
-                td(colspan="6").player-heading
-                    span.player-name Martin Van Buren
-                    span.player-position.striker
-                        span Striker
-                    span.player-race.tiny-text Human
-            tr
-                td.player-number.large-text 08
-                td.player-stat 5
-                    span.player-stat-label.tiny-text move
-                td.player-stat 4
-                    span.player-stat-label.tiny-text strength
-                td.player-stat 4
-                    span.player-stat-label.tiny-text speed
-                td.player-stat 4
-                    span.player-stat-label.tiny-text skill
-                td.player-stat 5
-                    span.player-stat-label.tiny-text armor
+        header.team-name
+            h2 Trontek 49ers
+
+        section.roster
+
+            header.roster-header.clearfix
+                h3.tiny-text.text-center Move
+                h3.tiny-text.text-center Strength
+                h3.tiny-text.text-center Speed
+                h3.tiny-text.text-center Skill
+                h3.tiny-text.text-center Armor
+
+            dl.player.clearfix
+                dt.player-name.em: dfn George Washington
+                dd.player-race.tiny-text Human
+                dd.player-position.guard: span Guard
+                dd.player-number.large-text 01
+                dd.player-move.text-center 5
+                dd.player-strength.text-center 4
+                dd.player-speed.text-center 4
+                dd.player-skill.text-center 4
+                dd.player-armor.text-center 4
+
+            dl.player.clearfix
+                dt.player-name.em: dfn John Adams
+                dd.player-race.tiny-text Human
+                dd.player-position.jack: span Jack
+                dd.player-number.large-text 02
+                dd.player-move.text-center 5
+                dd.player-strength.text-center 4
+                dd.player-speed.text-center 4
+                dd.player-skill.text-center 4
+                dd.player-armor.text-center 4
+
+            dl.player.clearfix
+                dt.player-name.em: dfn Thomas Jefferson
+                dd.player-race.tiny-text Human
+                dd.player-position.striker: span Striker
+                dd.player-number.large-text 03
+                dd.player-move.text-center 5
+                dd.player-strength.text-center 4
+                dd.player-speed.text-center 4
+                dd.player-skill.text-center 4
+                dd.player-armor.text-center 5
 
     article
-        p.huge-text .huge-text
-            br 
-            | .huge-text
+        section
+            p.huge-text .huge-text
+                br 
+                | .huge-text
 
-        p.large-text .large-text
-            br
-            | .large-text
+            p.large-text .large-text
+                br
+                | .large-text
 
-        p .normal-text
-            br
-            strong .normal-text
+            p .normal-text
+                br
+                strong .normal-text
 
-        p.small-text .small-text
-            br
-            em .small-text
+            p.small-text .small-text
+                br
+                em .small-text
 
-        p.tiny-text .tiny-text
-            br
-            | .tiny-text
+            p.tiny-text .tiny-text
+                br
+                | .tiny-text
