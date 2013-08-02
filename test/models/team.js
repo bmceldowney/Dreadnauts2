@@ -7,14 +7,9 @@ describe('Team', function() {
     var team = new Team();
 
     it('should have a unique 32-bit id', function() {
-        
-        var other;
-        
         team.id.should.be.a('string').and.have.property('length', 32);
-
         for (var i = 0; i < 1000; i++) {
-            other = new Team();
-            team.id.should.not.equal(other.id);
+            team.id.should.not.equal(new Team().id);
         }
     });
 
