@@ -1,6 +1,8 @@
 var Enums = require('../enums');
+var Constants = require('../constants');
 var Player = require('./player');
 var hat = require('hat');
+var util = require('util');
 
 module.exports = exports = function(template) {
 
@@ -11,8 +13,17 @@ module.exports = exports = function(template) {
     this.players = [];
 }
 
+exports.prototype.canAddMorePlayers = function() {
+    return this.players.length < Constants.MAX_PLAYERS_PER_TEAM;
+}
+
 exports.prototype.add = function(player) {
-    this.players.push(player);
+    if (this.canAddMorePlayers()) {
+        this.players.push(player);
+    }
+    else {
+        throw new RangeError(util.format('Number of players cannot exceed %s', MAX_PLAYERS));
+    }
 }
 
 exports.prototype.remove = function(playerId) {

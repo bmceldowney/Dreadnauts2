@@ -11,6 +11,8 @@ function define(name, value) {
     });
 }
 
+define('MAX_PLAYERS_PER_TEAM', 14);
+
 define(Enums.Teams.TRONTEK_49ERS, 'TronTek 49ers');
 define(Enums.Teams.GREENMOON_SMACKERS, 'Greenmoon Smackers');
 define(Enums.Teams.SKITTERSNEAK_STEALERS, 'Skittersneak Stealers');
