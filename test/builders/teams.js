@@ -3,6 +3,7 @@ var Constants = require('../../app/constants');
 var Teams = require('../../app/builders/teams');
 var Player = require('../../app/models/player');
 var Team = require('../../app/models/team');
+var util = require('util');
 var should = require('should');
 
 describe('TronTek 49ers', function() {
@@ -51,14 +52,18 @@ function testTeam(team, expectations) {
 
     expectations.forEach(function(set) {
 
+        var spec;
+
         if (set.count > 0) {
-            it('should have %1 %2 %3(s)'.replace('%1', set.count).replace('%2', Constants[set.race]).replace('%3', Constants[set.position]), function() {
+            spec = util.format('should have %s %s %s(s)', set.count, Constants[set.race], Constants[set.position]);
+            it(spec, function() {
                 should.exist(tally[set.position + set.race]);
                 tally[set.position + set.race].should.equal(set.count);
             });
         }
         else {
-            it('should have 0 %1s'.replace('%1', Constants[set.position]), function() {
+            spec = util.format('should have 0 %ss', Constants[set.position]);
+            it(spec, function() {
                 should.not.exist(tally[set.position + set.race]);
             });
         }

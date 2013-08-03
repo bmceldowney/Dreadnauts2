@@ -3,6 +3,7 @@ var Constants = require('../../app/constants');
 var Player = require('../../app/models/player');
 var Players = require('../../app/builders/players');
 var should = require('should');
+var util = require('util');
 
 describe('TronTek 49ers Guard', function() {
     var subject = Players.build(Enums.Players.TRONTEK_49ERS_GUARD);
@@ -83,65 +84,31 @@ function testPlayer(subject, race, position, move, strength, speed, skill, armor
 
 function testPlayerRace(subject, race) {
 
-    switch (race) {
-
-        case Enums.Races.HUMAN:
-            it('should be a human', function() {
-                subject.race.should.equal(Enums.Races.HUMAN);
-            });
-            break;
-
-        case Enums.Races.ORX:
-            it('should be an orx', function() {
-                subject.race.should.equal(Enums.Races.ORX);
-            });
-            break;
-
-        case Enums.Races.GOBLIN:
-            it('should be a goblin', function() {
-                subject.race.should.equal(Enums.Races.GOBLIN);
-            });
-            break;
-
-        case Enums.Races.VEERMYN:
-            it('should be a veer-myn', function() {
-                subject.race.should.equal(Enums.Races.VEERMYN);
-            });
-            break;
-
-        case Enums.Races.FORGEFATHER:
-            it('should be a forgefather', function() {
-                subject.race.should.equal(Enums.Races.FORGEFATHER);
-            });
-            break;
-    }
+    it(util.format('should be a(n) %s', Constants[race]), function() {
+        subject.race.should.equal(race);
+    });
 };
 
 function testPlayerPosition(subject, position) {
 
-    switch (position) {
+    it(util.format('should be a %s', Constants[position]), function() {
+        subject.position.should.equal(position);
 
-        case Enums.Positions.GUARD:
-            it('should be a guard', function() {
-                subject.position.should.equal(Enums.Positions.GUARD);
+        switch (position) {
+
+            case Enums.Positions.GUARD:
                 subject.actions.should.equal(Constants.GUARD_ACTIONS);
-            });
-            break;
+                break;
 
-        case Enums.Positions.JACK:
-            it('should be a jack', function() {
-                subject.position.should.equal(Enums.Positions.JACK);
+            case Enums.Positions.JACK:
                 subject.actions.should.equal(Constants.JACK_ACTIONS);
-            });
-            break;
+                break;
 
-        case Enums.Positions.STRIKER:
-            it('should be a striker', function() {
-                subject.position.should.equal(Enums.Positions.STRIKER);
+            case Enums.Positions.STRIKER:
                 subject.actions.should.equal(Constants.STRIKER_ACTIONS);
-            });
-            break;
-    }
+                break;
+        }
+    });
 };
 
 function testPlayerStats(subject, move, strength, speed, skill, armor) {
