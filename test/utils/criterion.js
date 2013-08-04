@@ -1,4 +1,4 @@
-var Criterion = require('../../app/criteria/criterion');
+var Criterion = require('../../app/utils/criterion');
 var should = require('should');
 
 describe('Criterion', function() {
