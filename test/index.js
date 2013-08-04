@@ -1,4 +1,5 @@
-require('./models/player.js');
-require('./models/team.js');
-require('./builders/players.js');
-require('./builders/teams.js');
+require('./models/player');
+require('./models/team');
+require('./builders/players');
+require('./builders/teams');
+require('./criteria/criterion.js');
