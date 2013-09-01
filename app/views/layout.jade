@@ -10,22 +10,11 @@ html
   body
 
     header.db-navbar.navbar.navbar-inverse(role="header")
-        div.container
-            a.navbar-brand Dreadnauts
-            ul.nav.navbar-nav.hidden-sm
-                li: a(href="#") Actions
-                li: a(href="#") Abilities
-                li: a(href="#") Teams
-            p.navbar-text.pull-right.hidden-sm: small &nbsp;version 0.1
-
-    div(role="main")
-        div.container
-            div.row
-                section.col-lg-9
-                    h3 Quicksearch
-                    form(role="search")
-                        div.form-group
-                            input.form-control(x-webkit-speech, placeholder="Running Interference...")
+        div.navbar-header
+            a(href="/").navbar-brand Dreadnauts
+        form(role="search", method="GET", action="search").navbar-form
+            div.form-group
+                input(type="text", placeholder="Quicksearch...", name="q").form-control
 
     block content
 

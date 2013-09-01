@@ -75,7 +75,7 @@ define(Enums.Abilities.STEADY, 'Steady');
 define(Enums.Abilities.THREESIXTY_VISION, '360 Vision');
 define(Enums.Abilities.ALERT, 'Alert');
 define(Enums.Abilities.DIRTY_TRICKS, 'Dirty Tricks');
-define(Enums.Abilities.DUCK_AND_WEAVE, 'Duck &amp; Weave');
+define(Enums.Abilities.DUCK_AND_WEAVE, 'Duck and Weave');
 define(Enums.Abilities.EVEN_THE_ODDS, 'Even the Odds');
 define(Enums.Abilities.LONG_ARMS, 'Long Arms');
 define(Enums.Abilities.MISDIRECT, 'Misdirect');

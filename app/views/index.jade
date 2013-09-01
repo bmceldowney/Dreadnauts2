@@ -2,5 +2,21 @@ extends layout
 
 block content
 
-    article
-        a(href="/styleguide") Check out the style guide!
+    div(role="main")
+        div.container
+
+            div.row
+                dl.col-lg-4
+                    dt Teams
+                    each id in Enums.Teams
+                        dd: a(href="/team/#{id}") #{Constants[id]}
+
+                dl.col-lg-4
+                    dt Actions
+                    each id in Enums.Actions
+                        dd: a(href="/action/#{id}") #{Constants[id]}
+
+                dl.col-lg-4
+                    dt Abilities
+                    each id in Enums.Abilities
+                        dd: a(href="/ability/#{id}") #{Constants[id]}
