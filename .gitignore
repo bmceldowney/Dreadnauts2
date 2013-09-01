@@ -1,3 +1,4 @@
 node_modules/
 artwork/
 .DS_Store
+*.log
