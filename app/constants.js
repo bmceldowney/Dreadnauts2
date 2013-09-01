@@ -17,6 +17,10 @@ define(Enums.Teams.TRONTEK_49ERS, 'TronTek 49ers');
 define(Enums.Teams.GREENMOON_SMACKERS, 'Greenmoon Smackers');
 define(Enums.Teams.SKITTERSNEAK_STEALERS, 'Skittersneak Stealers');
 define(Enums.Teams.MIDGARD_DELVERS, 'Midgard Delvers');
+define(Enums.Teams.CHROMIUM_CHARGERS, 'Chromium Chargers');
+define(Enums.Teams.LOCUST_CITY_CHIEFS, 'Locust City Chiefs');
+define(Enums.Teams.PELGAR_MYSTICS, 'Pelgar Mystics');
+define(Enums.Teams.VOID_SIRENS, 'Void Sirens');
 
 define(Enums.Positions.GUARD, 'guard');
 define(Enums.Positions.JACK, 'jack');
@@ -27,6 +31,32 @@ define(Enums.Races.ORX, 'orx');
 define(Enums.Races.GOBLIN, 'goblin');
 define(Enums.Races.VEERMYN, 'veer-myn');
 define(Enums.Races.FORGEFATHER, 'forge father');
+define(Enums.Races.ROBOT, 'robot');
+define(Enums.Races.ZZOR, 'z\'zor');
+define(Enums.Races.JUDWAN, 'judwan');
+
+define(Enums.Actions.RUN, 'Run');
+define(Enums.Actions.SPRINT, 'Sprint');
+define(Enums.Actions.DASH, 'Dash');
+define(Enums.Actions.PICK_UP, 'Pick Up');
+define(Enums.Actions.THROW, 'Throw');
+define(Enums.Actions.CATCH, 'Catch');
+define(Enums.Actions.EVADE, 'Evade');
+define(Enums.Actions.DODGE, 'Dodge');
+define(Enums.Actions.SLAM, 'Slam');
+define(Enums.Actions.STEAL, 'Steal');
+define(Enums.Actions.SLAMBACK, 'Slamback');
+define(Enums.Actions.STOMP, 'Stomp');
+define(Enums.Actions.DISTRACT_THE_REF, 'Distract the Ref');
+define(Enums.Actions.MOVE_ONTO_THE_PITCH, 'Move onto the Pitch');
+define(Enums.Actions.ARMOR_CHECK, 'Armor Check');
+define(Enums.Actions.STAND_UP, 'Stand Up');
+define(Enums.Actions.SUCKER_PUNCH, 'Sucker Punch');
+define(Enums.Actions.JUMP, 'Jump');
+define(Enums.Actions.PUNT, 'Punt');
+define(Enums.Actions.ROLL, 'Roll');
+define(Enums.Actions.TRANSFORM, 'Transform');
+define(Enums.Actions.FEINT, 'Feint');
 
 define(Enums.Abilities.SAFE_PAIR_OF_HANDS, 'A Safe Pair of Hands');
 define(Enums.Abilities.BACKFLIP, 'Backflip');
@@ -42,6 +72,20 @@ define(Enums.Abilities.MIND_LIKE_WATER, 'Mind Like Water');
 define(Enums.Abilities.ROLL, 'Roll');
 define(Enums.Abilities.RUNNING_INTERFERENCE, 'Running Interference');
 define(Enums.Abilities.STEADY, 'Steady');
+define(Enums.Abilities.THREESIXTY_VISION, '360 Vision');
+define(Enums.Abilities.ALERT, 'Alert');
+define(Enums.Abilities.DIRTY_TRICKS, 'Dirty Tricks');
+define(Enums.Abilities.DUCK_AND_WEAVE, 'Duck &amp; Weave');
+define(Enums.Abilities.EVEN_THE_ODDS, 'Even the Odds');
+define(Enums.Abilities.LONG_ARMS, 'Long Arms');
+define(Enums.Abilities.MISDIRECT, 'Misdirect');
+define(Enums.Abilities.PACIFIST, 'Pacifist');
+define(Enums.Abilities.PRIMA_DONNA, 'Prima Donna');
+define(Enums.Abilities.QUICK_CHANGE_ARTIST, 'Quick Change Artist');
+define(Enums.Abilities.QUICK_RECOVERY, 'Quick Recovery');
+define(Enums.Abilities.SHOW_OFF, 'Show Off');
+define(Enums.Abilities.SLIDE, 'Slide');
+define(Enums.Abilities.STRETCH, 'Stretch');
 
 define('GUARD_ACTIONS', [
     Enums.Actions.RUN,

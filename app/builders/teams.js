@@ -62,6 +62,56 @@ module.exports = exports = {
                 result.add(Players.build(Enums.Players.MIDGARD_DELVERS_STRIKER, '07'));
                 result.add(Players.build(Enums.Players.MIDGARD_DELVERS_STRIKER, '08'));
                 break;
+
+            case Enums.Teams.CHROMIUM_CHARGERS:
+                result = new Team();
+                result.name = Constants[Enums.Teams.CHROMIUM_CHARGERS];
+                result.add(Players.build(Enums.Players.CHROMIUM_CHARGERS_JACK, '01'));
+                result.add(Players.build(Enums.Players.CHROMIUM_CHARGERS_JACK, '02'));
+                result.add(Players.build(Enums.Players.CHROMIUM_CHARGERS_JACK, '03'));
+                result.add(Players.build(Enums.Players.CHROMIUM_CHARGERS_JACK, '04'));
+                result.add(Players.build(Enums.Players.CHROMIUM_CHARGERS_JACK, '05'));
+                result.add(Players.build(Enums.Players.CHROMIUM_CHARGERS_JACK, '06'));
+                break;
+
+            case Enums.Teams.LOCUST_CITY_CHIEFS:
+                result = new Team();
+                result.name = Constants[Enums.Teams.LOCUST_CITY_CHIEFS];
+                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_GUARD, '01'));
+                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_JACK, '02'));
+                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_JACK, '03'));
+                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_JACK, '04'));
+                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_JACK, '05'));
+                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_JACK, '06'));
+                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_STRIKER, '07'));
+                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_STRIKER, '08'));
+                break;
+
+            case Enums.Teams.PELGAR_MYSTICS:
+                result = new Team();
+                result.name = Constants[Enums.Teams.PELGAR_MYSTICS];
+                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '01'));
+                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '02'));
+                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '03'));
+                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '04'));
+                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '05'));
+                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '06'));
+                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '07'));
+                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '08'));
+                break;
+
+            case Enums.Teams.VOID_SIRENS:
+                result = new Team();
+                result.name = Constants[Enums.Teams.VOID_SIRENS];
+                result.add(Players.build(Enums.Players.VOID_SIRENS_GUARD, '01'));
+                result.add(Players.build(Enums.Players.VOID_SIRENS_JACK, '02'));
+                result.add(Players.build(Enums.Players.VOID_SIRENS_JACK, '03'));
+                result.add(Players.build(Enums.Players.VOID_SIRENS_JACK, '04'));
+                result.add(Players.build(Enums.Players.VOID_SIRENS_JACK, '05'));
+                result.add(Players.build(Enums.Players.VOID_SIRENS_STRIKER, '06'));
+                result.add(Players.build(Enums.Players.VOID_SIRENS_STRIKER, '07'));
+                result.add(Players.build(Enums.Players.VOID_SIRENS_STRIKER, '08'));
+                break;
         }
         return result;
     }

@@ -6,6 +6,10 @@ exports.Teams.TRONTEK_49ERS = 100;
 exports.Teams.GREENMOON_SMACKERS = 101;
 exports.Teams.SKITTERSNEAK_STEALERS = 102;
 exports.Teams.MIDGARD_DELVERS = 103;
+exports.Teams.CHROMIUM_CHARGERS = 104;
+exports.Teams.LOCUST_CITY_CHIEFS = 105;
+exports.Teams.PELGAR_MYSTICS = 106;
+exports.Teams.VOID_SIRENS = 107;
 
 /* POSITIONS 200 - 299 */
 exports.Positions = {};
@@ -25,6 +29,16 @@ exports.Players.SKITTERSNEAK_STEALERS_STRIKER = 306;
 exports.Players.MIDGARD_DELVERS_GUARD = 307;
 exports.Players.MIDGARD_DELVERS_JACK = 308;
 exports.Players.MIDGARD_DELVERS_STRIKER = 309;
+exports.Players.CHROMIUM_CHARGERS_GUARD = 310;
+exports.Players.CHROMIUM_CHARGERS_JACK = 311;
+exports.Players.CHROMIUM_CHARGERS_STRIKER = 312;
+exports.Players.LOCUST_CITY_CHIEFS_GUARD = 313;
+exports.Players.LOCUST_CITY_CHIEFS_JACK = 314;
+exports.Players.LOCUST_CITY_CHIEFS_STRIKER = 315;
+exports.Players.PELGAR_MYSTICS_STRIKER = 316;
+exports.Players.VOID_SIRENS_GUARD = 317;
+exports.Players.VOID_SIRENS_JACK = 318;
+exports.Players.VOID_SIRENS_STRIKER = 319;
 
 /* RACES 600 - 699 */
 exports.Races = {};
@@ -33,6 +47,9 @@ exports.Races.ORX = 601;
 exports.Races.GOBLIN = 602;
 exports.Races.VEERMYN = 603;
 exports.Races.FORGEFATHER = 604;
+exports.Races.ROBOT = 605;
+exports.Races.ZZOR = 606;
+exports.Races.JUDWAN = 607;
 
 /* ACTIONS 400 - 499 */
 exports.Actions = {};
@@ -56,6 +73,9 @@ exports.Actions.SUCKER_PUNCH = 416;
 exports.Actions.JUMP = 417;
 exports.Actions.PUNT = 418;
 exports.Actions.ROLL = 419;
+exports.Actions.TRANSFORM = 420;
+exports.Actions.FEINT = 421;
+
 
 /* ABILITIES 500 - 599 */
 exports.Abilities = {};
@@ -73,3 +93,17 @@ exports.Abilities.MIND_LIKE_WATER = 510;
 exports.Abilities.ROLL = 511;
 exports.Abilities.RUNNING_INTERFERENCE = 512;
 exports.Abilities.STEADY = 513;
+exports.Abilities.THREESIXTY_VISION = 514;
+exports.Abilities.ALERT = 515;
+exports.Abilities.DIRTY_TRICKS = 516;
+exports.Abilities.DUCK_AND_WEAVE = 517;
+exports.Abilities.EVEN_THE_ODDS = 518;
+exports.Abilities.LONG_ARMS = 519;
+exports.Abilities.MISDIRECT = 520;
+exports.Abilities.PACIFIST = 521;
+exports.Abilities.PRIMA_DONNA = 522;
+exports.Abilities.QUICK_CHANGE_ARTIST = 523;
+exports.Abilities.QUICK_RECOVERY = 524;
+exports.Abilities.SHOW_OFF = 525;
+exports.Abilities.SLIDE = 526;
+exports.Abilities.STRETCH = 527;
