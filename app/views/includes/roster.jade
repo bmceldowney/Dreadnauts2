@@ -1,13 +1,13 @@
 if roster
     section.roster
 
-        table.table.table-hover
+        table.table.table-striped.table-condensed
             thead
                 tr
-                    th
-                    th.hidden-sm
-                    th.hidden-sm Race
-                    th.text-center
+                    th(colspan="2")
+                        small.visible-sm Position
+                        span.visible-md Position
+                        span.visible-lg Position
                     th.hidden-sm.text-center
                         small.visible-sm Xp
                         span.visible-md Xp
@@ -37,15 +37,15 @@ if roster
                         span.visible-md Ar
                         span.visible-lg Armor
                     th.text-right
-                        small.visible-sm &#8354;
+                        small.visible-sm M&#8354;
                         span.hidden-sm M&#8354;
                 -each player in roster
                     tbody.player
-                        tr
-                            td.player-number.large-text= player.number
-                            td.hidden-sm.player-name.em= player.name
-                            td.hidden-sm.player-race.tiny-text= Constants[player.race]
-                            td.text-center(class="player-position #{Constants[player.position]}"): span= Constants[player.position].substr(0,1).toUpperCase()
+                        tr.player-stats
+                            td 
+                                span #{player.number}
+                            td(class="player-position #{Constants[player.position]}")
+                                span.capitalized #{Constants[player.position]}
                             td.hidden-sm.text-center.player-exp 0
                             td.hidden-sm.text-center.player-rank 1
                             td.text-center.player-move= player.move
@@ -54,8 +54,14 @@ if roster
                             td.text-center.player-skill= player.skill
                             td.text-center.player-armor= player.armor
                             td.text-right.player-value= player.cost
-                        if player.abilities.length > 0
-                            tr
-                                td(colspan=12): small
-                                    -each ability in player.abilities
-                                        a(href="#").label.label-default= Constants[ability]
+                        tr.player-abilities
+                            td(colspan=11): small Abilities:
+                                if player.abilities.length > 0
+                                    each ability, index in player.abilities
+                                        if index > 0
+                                            |,&nbsp;
+                                        else
+                                            | &nbsp;
+                                        a(href="#") #{Constants[ability]}
+                                else
+                                    em.text-muted &nbsp;None

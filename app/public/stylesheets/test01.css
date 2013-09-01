@@ -1,5 +1,6 @@
-body {
-	padding-top: 50px;
+.db-navbar {
+	border-radius: 0;
+	margin-bottom: 0;
 }
 
 .db-jumbotron {
@@ -8,15 +9,23 @@ body {
 	margin-bottom: 0;
 }
 
+.capitalized {
+	text-transform: capitalize;
+}
+
 .panel .table {
 	margin-bottom: 0;
 }
 
 [role="main"] {
 	/*background-image: url(/images/hexellence.png);*/
-	border-bottom: 1px solid #888;
+	/*border-bottom: 1px solid #888;*/
 }
 
 [role="footer"] {
-	min-height: 240px;
+	min-height: 10px;
+}
+
+.player-position {
+	white-space: nowrap;
 }

@@ -9,7 +9,7 @@ html
     link(rel='stylesheet', href='/stylesheets/test01.css')
   body
 
-    header.navbar.navbar-inverse.navbar-fixed-top(role="header")
+    header.db-navbar.navbar.navbar-inverse(role="header")
         div.container
             a.navbar-brand Dreadnauts
             ul.nav.navbar-nav.hidden-sm
@@ -17,6 +17,15 @@ html
                 li: a(href="#") Abilities
                 li: a(href="#") Teams
             p.navbar-text.pull-right.hidden-sm: small &nbsp;version 0.1
+
+    div(role="main")
+        div.container
+            div.row
+                section.col-lg-9
+                    h3 Quicksearch
+                    form(role="search")
+                        div.form-group
+                            input.form-control(x-webkit-speech, placeholder="Running Interference...")
 
     block content
 

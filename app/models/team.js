@@ -11,6 +11,9 @@ module.exports = exports = function(template) {
     this.id = template.id || hat();
     this.name = template.name || '';
     this.players = [];
+    this.dice = template.dice || 0;
+    this.cards = template.cards || 0;
+    this.cash = template.cash || 0;
 }
 
 exports.prototype.canAddMorePlayers = function() {

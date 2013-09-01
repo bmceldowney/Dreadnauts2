@@ -6,64 +6,16 @@ block content
         div.container
 
             div.row
-                div.col-lg-12
-                    h1 Midgard Delvers
-                    p.lead This is a context-free example of how general parts of the site should look and feel.
-
-            div.row
 
                 div.col-lg-9
                     if team
-                        h3.text-right 
-                            small M&#8354;
-                            | 121 / 16 / +7
                         section.team
+                            h2= team.name
+                            div
+                                small #{team.cards} Cards / 
+                                small #{team.dice} Coaching Die / 
+                                small M&#8354; #{team.cash}
                             - var roster = team.players
                             include includes/roster
 
                 div.col-lg-3
-
-                    section
-                        h3 Quicksearch
-                        form(role="search")
-                            div.form-group
-                                input.form-control(x-webkit-speech, placeholder="Running Interference...")
-
-                    section
-                        h3 Leaderboard
-                        table.table.table-condensed
-                            thead
-                                tr
-                                    th: small
-                                    th: small
-                                    th.text-right: small M&#8354;
-                            tbody
-                                tr
-                                    td: small Trontek 49ers
-                                    td.text-right: small +9
-                                    td.text-right: small 141
-                                tr
-                                    td: small Greenmoon Smackers
-                                    td.text-right: small +3
-                                    td.text-right: small 133
-                                tr
-                                    td: small Midgard Delvers
-                                    td.text-right: small -1
-                                    td.text-right: small 127
-                                tr
-                                    td: small Skittersneak Stealers
-                                    td.text-right: small -4
-                                    td.text-right: small 118
-
-                    section
-                        h1 Heading 1
-                        h2 Heading 2
-                        h3 Heading 3
-                        h4 Heading 4
-                        h5 Heading 5
-                        h6 Heading 6
-                        p.lead Leader text
-                        p Normal text
-                        p: strong Strong text
-                        p: em Emphasized text
-                        p: small Small text
