@@ -5,24 +5,26 @@ html
     meta(name="MobileOptimized", content="320")
     meta(name="viewport", content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
     meta(http-equiv="cleartype", content="on")
-    link(rel='stylesheet', href='/stylesheets/elements.css')
-    link(rel='stylesheet', href='/stylesheets/formats.css')
-    link(rel='stylesheet', href='/stylesheets/modules.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/test01.css')
   body
 
-    header.clearfix(role="header")
-        h1.huge-text.header-text Dreadnauts
-            small.tiny-text &nbsp;v.0.1
-        fieldset.header-controls
-            button.header-menu menu
+    header.navbar.navbar-inverse.navbar-fixed-top(role="header")
+        div.container
+            a.navbar-brand Dreadnauts
+            ul.nav.navbar-nav.hidden-sm
+                li: a(href="#") Actions
+                li: a(href="#") Abilities
+                li: a(href="#") Teams
+            p.navbar-text.pull-right.hidden-sm: small &nbsp;version 0.1
 
-    div.clearfix(role="main")
-        block content
+    block content
 
-    footer.clearfix(role="footer")
+    footer(role="footer")
+        div.container
 
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
-    script(src='/javascripts/jquery.hammer.js')
+    script(src='/javascripts/bootstrap.min.js')
     script(src='/javascripts/main.js')
     script
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')

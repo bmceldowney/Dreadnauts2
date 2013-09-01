@@ -17,4 +17,5 @@ module.exports = exports = function(template) {
     this.armor = template.armor || -1;
     this.actions = template.actions || [];
     this.abilities = template.abilities || [];
+    this.cost = template.cost || 0;
 }

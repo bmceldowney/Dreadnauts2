@@ -43,19 +43,3 @@ dl, dd, dt, ul, ol, li {
     margin: 0;
     padding: 0;
 }
-
-@media screen and (orientation:portrait) {
-
-    body {
-        background-image: url(/images/bkg_body_portrait.jpg);
-        background-position: top center;
-    }
-}
-
-@media screen and (orientation:landscape) {
-
-    body {
-        background-image: url(/images/bkg_body_landscape.jpg);
-        background-position: center center;
-    }
-}

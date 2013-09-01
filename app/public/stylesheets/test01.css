@@ -1,0 +1,22 @@
+body {
+	padding-top: 50px;
+}
+
+.db-jumbotron {
+	background-color: #fff;
+	border-bottom: 1px solid #888;
+	margin-bottom: 0;
+}
+
+.panel .table {
+	margin-bottom: 0;
+}
+
+[role="main"] {
+	/*background-image: url(/images/hexellence.png);*/
+	border-bottom: 1px solid #888;
+}
+
+[role="footer"] {
+	min-height: 240px;
+}

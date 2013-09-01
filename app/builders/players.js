@@ -4,7 +4,7 @@ var Player = require('../models/player');
 
 module.exports = exports = {
 
-    build: function(type) {
+    build: function(type, number, name) {
 
         var result = null;
 
@@ -19,6 +19,7 @@ module.exports = exports = {
                     speed: 4,
                     skill: 4,
                     armor: 4,
+                    cost: 10,
                     actions: Constants.GUARD_ACTIONS
                 });
                 break;
@@ -32,6 +33,7 @@ module.exports = exports = {
                     speed: 4,
                     skill: 4,
                     armor: 4,
+                    cost: 8,
                     actions: Constants.JACK_ACTIONS
                 });
                 break;
@@ -45,6 +47,7 @@ module.exports = exports = {
                     speed: 4,
                     skill: 4,
                     armor: 5,
+                    cost: 10,
                     actions: Constants.STRIKER_ACTIONS
                 });
                 break;
@@ -58,6 +61,7 @@ module.exports = exports = {
                     speed: 4,
                     skill: 5,
                     armor: 4,
+                    cost: 13,
                     actions: Constants.GUARD_ACTIONS
                 });
                 break;
@@ -71,6 +75,7 @@ module.exports = exports = {
                     speed: 3,
                     skill: 4,
                     armor: 4,
+                    cost: 9,
                     actions: Constants.JACK_ACTIONS
                 });
                 break;
@@ -84,6 +89,7 @@ module.exports = exports = {
                     speed: 3,
                     skill: 5,
                     armor: 4,
+                    cost: 12,
                     actions: Constants.GUARD_ACTIONS
                 });
                 break;
@@ -97,6 +103,7 @@ module.exports = exports = {
                     speed: 3,
                     skill: 5,
                     armor: 5,
+                    cost: 11,
                     actions: Constants.STRIKER_ACTIONS
                 });
                 break;
@@ -110,6 +117,7 @@ module.exports = exports = {
                     speed: 5,
                     skill: 4,
                     armor: 4,
+                    cost: 13,
                     actions: Constants.GUARD_ACTIONS,
                     abilities: [
                         Enums.Abilities.STEADY
@@ -126,6 +134,7 @@ module.exports = exports = {
                     speed: 5,
                     skill: 4,
                     armor: 4,
+                    cost: 9,
                     actions: Constants.JACK_ACTIONS
                 });
                 break;
@@ -139,10 +148,15 @@ module.exports = exports = {
                     speed: 5,
                     skill: 4,
                     armor: 5,
+                    cost: 9,
                     actions: Constants.STRIKER_ACTIONS
                 });
                 break;
         }
+
+        if (number) result.number = number;
+        if (name) result.name = name;
+
         return result;
     }
 }

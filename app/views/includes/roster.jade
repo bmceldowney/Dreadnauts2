@@ -1,12 +1,61 @@
 if roster
     section.roster
 
-        header.roster-header.clearfix
-            h3.tiny-text.text-center Move
-            h3.tiny-text.text-center Strength
-            h3.tiny-text.text-center Speed
-            h3.tiny-text.text-center Skill
-            h3.tiny-text.text-center Armor
-
-        -each player in roster
-            include player
+        table.table.table-hover
+            thead
+                tr
+                    th
+                    th.hidden-sm
+                    th.hidden-sm Race
+                    th.text-center
+                    th.hidden-sm.text-center
+                        small.visible-sm Xp
+                        span.visible-md Xp
+                        span.visible-lg Exp
+                    th.hidden-sm.text-center
+                        small.visible-sm Rn
+                        span.visible-md Rn
+                        span.visible-lg Rank
+                    th.text-center
+                        small.visible-sm Mv
+                        span.visible-md Mv
+                        span.visible-lg Move
+                    th.text-center
+                        small.visible-sm St
+                        span.visible-md St
+                        span.visible-lg Strength
+                    th.text-center
+                        small.visible-sm Sp
+                        span.visible-md Sp
+                        span.visible-lg Speed
+                    th.text-center
+                        small.visible-sm Sk
+                        span.visible-md Sk
+                        span.visible-lg Skill
+                    th.text-center
+                        small.visible-sm Ar
+                        span.visible-md Ar
+                        span.visible-lg Armor
+                    th.text-right
+                        small.visible-sm &#8354;
+                        span.hidden-sm M&#8354;
+                -each player in roster
+                    tbody.player
+                        tr
+                            td.player-number.large-text= player.number
+                            td.hidden-sm.player-name.em= player.name
+                            td.hidden-sm.player-race.tiny-text= Constants[player.race]
+                            td.text-center(class="player-position #{Constants[player.position]}"): span= Constants[player.position].substr(0,1).toUpperCase()
+                            td.hidden-sm.text-center.player-exp 0
+                            td.hidden-sm.text-center.player-rank 1
+                            td.text-center.player-move= player.move
+                            td.text-center.player-strength= player.strength
+                            td.text-center.player-speed= player.speed
+                            td.text-center.player-skill= player.skill
+                            td.text-center.player-armor= player.armor
+                            td.text-right.player-value= player.cost
+                        if player.abilities.length > 0
+                            tr
+                                td(colspan=12): small
+                                    -each ability in player.abilities
+                                        a(href="#").label.label-default= Constants[ability]

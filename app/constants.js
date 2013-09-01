@@ -28,6 +28,21 @@ define(Enums.Races.GOBLIN, 'goblin');
 define(Enums.Races.VEERMYN, 'veer-myn');
 define(Enums.Races.FORGEFATHER, 'forge father');
 
+define(Enums.Abilities.SAFE_PAIR_OF_HANDS, 'A Safe Pair of Hands');
+define(Enums.Abilities.BACKFLIP, 'Backflip');
+define(Enums.Abilities.CANT_FEEL_A_THING, 'Can\'t Feel a Thing');
+define(Enums.Abilities.DOES_THIS_HURT, 'Does This Hurt');
+define(Enums.Abilities.GOTCHA, 'Gotcha');
+define(Enums.Abilities.GRIZZLED, 'Grizzled');
+define(Enums.Abilities.JUMP, 'Jump');
+define(Enums.Abilities.KEEPER, 'Keeper');
+define(Enums.Abilities.LUCKY, 'Lucky');
+define(Enums.Abilities.REALLY_LUCKY, 'Really Lucky');
+define(Enums.Abilities.MIND_LIKE_WATER, 'Mind Like Water');
+define(Enums.Abilities.ROLL, 'Roll');
+define(Enums.Abilities.RUNNING_INTERFERENCE, 'Running Interference');
+define(Enums.Abilities.STEADY, 'Steady');
+
 define('GUARD_ACTIONS', [
     Enums.Actions.RUN,
     Enums.Actions.SPRINT,
