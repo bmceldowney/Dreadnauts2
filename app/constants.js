@@ -25,6 +25,7 @@ define(Enums.Teams.VOID_SIRENS, 'Void Sirens');
 define(Enums.Positions.GUARD, 'Guard');
 define(Enums.Positions.JACK, 'Jack');
 define(Enums.Positions.STRIKER, 'Striker');
+define(Enums.Positions.KEEPER, 'Keeper');
 
 define(Enums.Races.HUMAN, 'Human');
 define(Enums.Races.ORX, 'Orx');
@@ -38,7 +39,7 @@ define(Enums.Races.JUDWAN, 'Judwan');
 define(Enums.Actions.RUN, 'Run');
 define(Enums.Actions.SPRINT, 'Sprint');
 define(Enums.Actions.DASH, 'Dash');
-define(Enums.Actions.PICK_UP, 'Pick Up');
+define(Enums.Actions.PICK_UP, 'Pick Up the Ball');
 define(Enums.Actions.THROW, 'Throw');
 define(Enums.Actions.CATCH, 'Catch');
 define(Enums.Actions.EVADE, 'Evade');

@@ -1,0 +1,49 @@
+h4 Any player
+p
+    | A dash modifies a 
+    a(href="/actions/#{Enums.Actions.RUN}") #{Constants[Enums.Actions.RUN]} 
+    | or 
+    a(href="/actions/#{Enums.Actions.SPRINT}") #{Constants[Enums.Actions.SPRINT]} 
+    | action. If the player is a #{Constants[Enums.Positions.GUARD]} or a 
+    | #{Constants[Enums.Positions.STRIKER]}, or if the player has the 
+    a(href="/actions/#{Enums.Abilities.SLIDE}") #{Constants[Enums.Abilities.SLIDE]} 
+    | ability, then this includes #{Constants[Enums.Actions.RUN]} actions that are a 
+    | part of a 
+    a(href="/actions/#{Enums.Actions.SLAM}") #{Constants[Enums.Actions.SLAM]}
+    | , 
+    a(href="/actions/#{Enums.Actions.THROW}") #{Constants[Enums.Actions.THROW]} 
+    | or 
+    a(href="/actions/#{Enums.Actions.STEAL}") #{Constants[Enums.Actions.STEAL]} 
+    | attempt.
+p
+    | The player moves as far as they can on a normal #{Constants[Enums.Actions.RUN]} 
+    | or #{Constants[Enums.Actions.SPRINT]} action, then declares that they will 
+    | #{Constants[Enums.Actions.DASH]} before rolling the dice.
+
+h5 #{Constants[Enums.Actions.DASH]} is a 3 dice Speed test (123)
+ul
+    li +1 if the player is a #{Constants[Enums.Positions.STRIKER]}.
+    li 
+        | -1 per opposing player threatening the hex the player is moving 
+        strong from 
+        | (maximum of -2).
+table.table.table-striped
+    tr
+        td #{Constants[Enums.Actions.DASH]} fails
+        td 
+            | The player making the #{Constants[Enums.Actions.DASH]} attempt falls 
+            | down into the hex they were moving to. If a loose ball was in that 
+            | hex then the ball scatters. If the player was carrying the ball then 
+            | the ball scatters and the rush ends.
+    tr
+        td #{Constants[Enums.Actions.DASH]} succeeds
+        td 
+            | The player making the #{Constants[Enums.Actions.DASH]} attempt gets 
+            | one extra hex of movement. If the player was taking a #{Constants[Enums.Actions.SPRINT]} 
+            | action, then this extra movement may be spent on one 60&deg; turn. 
+            | The player may make another #{Constants[Enums.Actions.DASH]} attempt 
+            | with +1 to the target number of successes.
+p
+    | Note that a player who falls over as the result of a #{Constants[Enums.Actions.DASH]} 
+    | attempt will not take an #{Constants[Enums.Actions.ARMOR_CHECK]}, and will 
+    | not be injured.

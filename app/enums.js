@@ -16,6 +16,7 @@ exports.Positions = {};
 exports.Positions.GUARD = 200;
 exports.Positions.JACK = 201;
 exports.Positions.STRIKER = 202;
+exports.Positions.KEEPER = 203;
 
 /* PLAYERS 300 - 399 */
 exports.Players = {};

@@ -8,8 +8,15 @@ block content
             div.row
 
                 div.col-lg-12
+                    -var hasPrev = Constants[action - 1];
+                    -var hasNext = Constants[action + 1];
                     section.action
                         if Constants[action]
+                            ul.pager
+                                if hasPrev
+                                    li.previous: a(href="/actions/#{[action - 1]}") &laquo; #{Constants[action - 1]}
+                                if hasNext
+                                    li.next: a(href="/actions/#{[action + 1]}") #{Constants[action + 1]} &raquo;
                             h2 #{Constants[action]}
                             !{description}
                         else

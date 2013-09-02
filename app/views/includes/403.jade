@@ -1,0 +1,46 @@
+h4 Any player
+p
+    | An attempt to #{Constants[Enums.Actions.PICK_UP]} must be made as a part of 
+    | any action that moves a #{Constants[Enums.Positions.JACK]}, #{Constants[Enums.Positions.STRIKER]} 
+    | or #{Constants[Enums.Positions.KEEPER]} onto a hex that contains the ball.
+p
+    | As part of a 
+    a(href="/actions/#{Enums.Actions.SPRINT}") #{Constants[Enums.Actions.SPRINT]} 
+    | action, the player must try
+    | to #{Constants[Enums.Actions.PICK_UP]} before they change facing. As part of 
+    | a 
+    a(href="/actions/#{Enums.Actions.RUN}") #{Constants[Enums.Actions.RUN]} 
+    | action, the player may face any direction 
+    | before attempting to #{Constants[Enums.Actions.PICK_UP]}.
+
+h5 #{Constants[Enums.Actions.PICK_UP]} is a 3 dice Skill test (1)
+ul
+    li +1 if the player is a #{Constants[Enums.Positions.STRIKER]}.
+    li -1 if the player is a #{Constants[Enums.Positions.KEEPER]}.
+    li -1 if this is part of a #{Constants[Enums.Actions.SPRINT]} action.
+    li 
+        | -1 per opposing player threatening the hex the player is moving 
+        strong from 
+        | (maximum of -2).
+table.table.table-striped
+    tr
+        td #{Constants[Enums.Actions.PICK_UP]} fails
+        td The ball scatters and the rush ends.
+    tr
+        td #{Constants[Enums.Actions.PICK_UP]} succeeds
+        td The player gains posession of the ball.
+    tr
+        td #{Constants[Enums.Actions.PICK_UP]} doubles
+        td The player gains posession of the ball and takes an immediate free action.
+p
+    | Note that if a #{Constants[Enums.Positions.GUARD]} moves into a hex containing 
+    | the ball, then the ball scatters immediately without ending the rush.
+p
+    | A player keeps the ball until they choose to 
+    a(href="/actions/#{Enums.Actions.THROW}") #{Constants[Enums.Actions.THROW]} 
+    | it, or until they ar knocked or fall down. If a player is knocked or falls 
+    | down then the ball scatters in the direction they were facing from the hex 
+    | they land in.
+p
+    | Holding the ball has no effect on a player's stats or available actions other 
+    | than allowing them to make a #{Constants[Enums.Actions.THROW]} attempt.
