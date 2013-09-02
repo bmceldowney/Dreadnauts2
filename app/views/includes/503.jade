@@ -1,0 +1,12 @@
+h4 #{Constants[Enums.Positions.GUARD]} or #{Constants[Enums.Positions.JACK]} only
+p
+	| The player treats 
+	a(href="/actions/#{Enums.Actions.STOMP}") #{Constants[Enums.Actions.STOMP]} 
+	| as if it were a 
+	a(href="/actions/#{Enums.Actions.SLAM}") #{Constants[Enums.Actions.SLAM]} 
+	|, being able to move 1 hex or 
+	a(href="/actions/#{Enums.Actions.RUN}") #{Constants[Enums.Actions.RUN]} 
+	| (depending on the player's role). If the player did not start adjacent to the target, 
+	| but moved adjacent during this action then they add 1 dice to their #{Constants[Enums.Actions.STOMP]}.
+p
+	| Node that in the eyes of the Ref this is still a #{Constants[Enums.Actions.STOMP]} and so still a foul.

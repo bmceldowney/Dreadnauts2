@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+    div(role="main")
+        div.container
+
+            div.row
+
+                div.col-lg-12
+                    -var hasPrev = Constants[ability - 1];
+                    -var hasNext = Constants[ability + 1];
+                    section.ability
+                        if Constants[ability]
+                            div.clearfix
+                                if hasPrev
+                                    div.pull-left: a(href="/ability/#{[ability - 1]}") &laquo; #{Constants[ability - 1]}
+                                if hasNext
+                                    div.pull-right: a(href="/ability/#{[ability + 1]}") #{Constants[ability + 1]} &raquo;
+                            h2 #{Constants[ability]}
+                            !{description}
+                        else
+                            include errors/404.jade

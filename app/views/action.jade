@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+    div(role="main")
+        div.container
+
+            div.row
+
+                div.col-lg-12
+                    section.action
+                        if Constants[action]
+                            h2 #{Constants[action]}
+                            !{description}
+                        else
+                            include errors/404.jade
