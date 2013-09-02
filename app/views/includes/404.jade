@@ -1,0 +1,118 @@
+h4 Any player
+p
+    | The player attempts to throw the ball to a teammate, at the strike hex to 
+    | score, or at an opponent to injure them.
+p
+    | A #{Constants[Enums.Positions.STRIKER]} may take a full 
+    a(href="/actions/#{Enums.Actions.RUN}") #{Constants[Enums.Actions.RUN]} 
+    | action as part of a #{Constants[Enums.Actions.THROW]} attempt, and may 
+    a(href="/actions/#{Enums.Actions.DASH}") #{Constants[Enums.Actions.DASH]} 
+    | if they choose to do so.
+p
+    | A #{Constants[Enums.Positions.JACK]} 
+    | may move up to 1 hex before making a #{Constants[Enums.Actions.THROW]}, turning 
+    | for free if they wish, but may not #{Constants[Enums.Actions.DASH]} 
+    | unless they have the 
+    a(href="/actions/#{Enums.Abilities.SLIDE}") #{Constants[Enums.Abilities.SLIDE]} 
+    | ability.
+
+h5 #{Constants[Enums.Actions.THROW]} is an (n) dice Skill test (1)
+ul
+    li +1 if the player is a #{Constants[Enums.Positions.STRIKER]}.
+    li -1 if the target is a Strike Hex.
+    li -1 if the player moved at all during this action.
+    li -1 per opposing player threatening the hex the player is in (maximum of -2).
+
+h5 Calculating distance
+p
+    | The number of dice rolled (n) during the test is based on the distance between 
+    | the player making the #{Constants[Enums.Actions.THROW]} attempt and their target. 
+    | The target must be visible (i.e. in the player's front arc, and with a clear route between them).
+p
+    | Distance is measured 
+    | by the shortest route, though there may be more than one shortest route. If 
+    | all possible shortest routes between the player and their target must cross 
+    | a standing player, then a #{Constants[Enums.Actions.THROW]} attempt can not 
+    | be made. Otherwise, if the route contains only empty hexes or fallen players, 
+    | then use the following table to determine how many dice to use:
+table.table.table-striped
+    tr
+        td 1&ndash;3 hexes
+        td 3 dice
+    tr
+        td 4&ndash;6 hexes
+        td 2 dice
+    tr
+        td 7&ndash;9 hexes
+        td 1 dice
+
+h5 Throwing a Strike
+p A Strike may only be thrown from an opponent's Strike Zone.
+table.table.table-striped
+    tr
+        td #{Constants[Enums.Actions.THROW]} fails
+        td The ball scatters and the rush ends.
+    tr
+        td #{Constants[Enums.Actions.THROW]} succeeds
+        td 
+            | Strike! Points are awarded to the player's team, the rush ends and 
+            | the ball is relaunched.
+    tr
+        td #{Constants[Enums.Actions.THROW]} doubles
+        td Strike! The player's team also gets a Fan Check.
+
+h5 Passing to a teammate
+p 
+    | When passing to a teammate, the player making the #{Constants[Enums.Actions.THROW]} 
+    | attempt must be in the target's front arc.
+table.table.table-striped
+    tr
+        td #{Constants[Enums.Actions.THROW]} fails
+        td 
+            | Inaccurate pass! The teammate may still make an attempt to 
+            a(href="/actions/#{Enums.Actions.CATCH}") #{Constants[Enums.Actions.CATCH]} 
+            | the ball, but with no dice except those granted by modifiers or coaching 
+            | dice. If the #{Constants[Enums.Actions.CATCH]} fails, then the ball 
+            | scatters and the rush is over.
+    tr
+        td #{Constants[Enums.Actions.THROW]} succeeds
+        td 
+            | The target player has as many dice as there were successes with which 
+            | to make a #{Constants[Enums.Actions.CATCH]} attempt.
+
+h5 Throwing the ball at an opposing player
+p 
+    | Throwing the ball at an opposing player is not a Foul, but still counts as 
+    | losing the ball, and will end the rush. If the player making the #{Constants[Enums.Actions.THROW]} 
+    | attempt is in the target's front arc, then the target may attempt to 
+    a(href="/actions/#{Enums.Actions.DODGE}") #{Constants[Enums.Actions.DODGE]}
+    | . If the target cannot #{Constants[Enums.Actions.DODGE]}, then it is played 
+    | as though the target had 0 successes.
+table.table.table-striped
+    tr
+        td #{Constants[Enums.Actions.THROW]} wins
+        td 
+            | The opponent is pushed into one of the 3 hexes directly away from the 
+            | winner. The winning player chooses which one. The losing player is 
+            | turned to face directly at the hex they just left. The ball scatters 
+            | and the rush ends.
+    tr
+        td #{Constants[Enums.Actions.THROW]} doubles
+        td
+            | The opponent is also knocked down, and must make an 
+            a(href="/actions/#{Enums.Actions.ARMOR_CHECK}") #{Constants[Enums.Actions.ARMOR_CHECK]} 
+            | equal to the difference between the two rolls. The ball scatters and 
+            | the rush ends.
+    tr
+        td Draw
+        td
+            | The ball scatters and the rush ends.
+    tr
+        td #{Constants[Enums.Actions.DODGE]} wins
+        td
+            | The ball scatters and the rush ends.
+    tr
+        td #{Constants[Enums.Actions.DODGE]} doubles
+        td
+            | The opponent may move 1 hex in any direction, and may choose to face 
+            | any direction. The ball scatters, and the rush ends.
