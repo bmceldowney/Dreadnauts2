@@ -1,0 +1,24 @@
+h4 #{Constants[Enums.Positions.GUARD]} only
+p
+	| A #{Constants[Enums.Abilities.KEEPER]} is a type of Guard, and unless a rule specifically differentiates 
+	| between the two, or is overridden here, the player should still be treated 
+	| as a Guard.
+ul
+	li Armor is increased to 4
+	li Player can 
+		a(href="/actions/#{Enums.Actions.PICK_UP}") #{Constants[Enums.Actions.PICK_UP]}
+	li Player can 
+		a(href="/actions/#{Enums.Actions.CATCH}") #{Constants[Enums.Actions.CATCH]}  
+	li Player can 
+		a(href="/actions/#{Enums.Actions.PUNT}") #{Constants[Enums.Actions.PUNT]}
+
+p
+	| Unlike a pure Guard, a #{Constants[Enums.Abilities.KEEPER]} can #{Constants[Enums.Actions.PICK_UP]} and
+	| #{Constants[Enums.Actions.CATCH]} the ball at -1 dice. A #{Constants[Enums.Abilities.KEEPER]} cannot 
+	| #{Constants[Enums.Actions.THROW]} the ball, but they do have a unique action
+	| called #{Constants[Enums.Actions.PUNT]}. A #{Constants[Enums.Actions.PUNT]}
+	| cannot be used to make a Strike, and it does count as losing the ball and
+	| ends the rush.
+p
+	| For more information visit the corresponding 
+	a(href="/actions/#{Enums.Actions.PUNT}") Action (#{Constants[Enums.Actions.PUNT]}) page.
