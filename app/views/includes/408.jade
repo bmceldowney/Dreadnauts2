@@ -1,0 +1,48 @@
+h4 #{Constants[Enums.Positions.GUARD]} or #{Constants[Enums.Positions.JACK]} only
+p
+    | The player attempts injure an opponent.
+    | A #{Constants[Enums.Positions.GUARD]} may take a full 
+    a(href="/actions/#{Enums.Actions.RUN}") #{Constants[Enums.Actions.RUN]} 
+    | action as part of a #{Constants[Enums.Actions.SLAM]} attempt, and may 
+    a(href="/actions/#{Enums.Actions.DASH}") #{Constants[Enums.Actions.DASH]} 
+    | if they choose to do so.
+    | A #{Constants[Enums.Positions.JACK]} 
+    | may move up to 1 hex before making a #{Constants[Enums.Actions.SLAM]}, turning 
+    | for free if they wish, but may not #{Constants[Enums.Actions.DASH]} 
+    | unless they have the 
+    a(href="/actions/#{Enums.Abilities.SLIDE}") #{Constants[Enums.Abilities.SLIDE]} 
+    | ability.
+
+h5 #{Constants[Enums.Actions.SLAM]} is a 3 dice Strength test (1)
+ul
+    li +1 if the player is a #{Constants[Enums.Positions.GUARD]}.
+    li +1 if the player moved adjacent to the target during this action.
+    li -1 per opposing player threatening the hex the player is in (maximum of -2).
+
+p
+    | The target may attempt to 
+    a(href="/actions/#{Enums.Actions.DODGE}") #{Constants[Enums.Actions.DODGE]} 
+    | or 
+    a(href="/actions/#{Enums.Actions.SLAMBACK}") #{Constants[Enums.Actions.SLAMBACK]} 
+    | in response to this action.
+
+table.table.table-striped
+    tr
+        td Draw
+        td The players both turn to directly face each other.
+    tr
+        td #{Constants[Enums.Actions.SLAM]} succeeds
+        td 
+            | The target is pushed into one of the 3 hexes directly away from the player. 
+            | The winning player chooses which hex the target is pushed into, and 
+            | may follow into the vacated hex if they choose to do so. The target 
+            | is turned to directly face the hex that was vacated. The winning player 
+            | is turned to face the target (if they followed up) or the vacated hex.
+    tr
+        td #{Constants[Enums.Actions.SLAM]} doubles
+        td
+            | The target is also knocked down, and must make an 
+            a(href="/actions/#{Enums.Actions.ARMOR_CHECK}") #{Constants[Enums.Actions.ARMOR_CHECK]} 
+            | against the difference in the number of successes between both players'
+            | rolls (e.g. If the winning roll was 3 and the target's roll was 1, then 
+            | target player makes a 2 dice #{Constants[Enums.Actions.ARMOR_CHECK]}).
