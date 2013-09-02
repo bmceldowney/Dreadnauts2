@@ -1,0 +1,16 @@
+h4 Any player
+p
+    | When a player with this ability is injured, they take an  
+    a(href="/actions/#{Enums.Actions.ARMOR_CHECK}") #{Constants[Enums.Actions.ARMOR_CHECK]} 
+    | as usual, but replace the normal #{Constants[Enums.Actions.ARMOR_CHECK]} 
+    | table with the following:
+table.table.table-striped
+    tr
+        td 0 damage
+        td The player remains on the pitch as normal.
+    tr
+        td 1&ndash;3 damage
+        td The player is in the Sin Bin for 1 turn.
+    tr
+        td 4+ damage
+        td The player is dead. Remove them from the game.

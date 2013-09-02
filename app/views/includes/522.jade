@@ -1,0 +1,41 @@
+h4 #{Constants[Enums.Positions.GUARD]} only
+p
+    | A player with this ability wants desperately to be a Striker. At the beginning
+    | of the match, roll one die before setting up any players on the pitch. On 
+    | a roll of 1, deploy the player as a Striker. Otherwise, deploy them as a 
+    | normal Guard.
+p
+    | If the player is deployed as a Striker, the following takes place:
+ul
+    li Armor is decreased to 5.
+    li The player can 
+        a(href="/actions/#{Enums.Actions.PICK_UP}") #{Constants[Enums.Actions.PICK_UP]}
+        |.
+    li The player can 
+        a(href="/actions/#{Enums.Actions.THROW}") #{Constants[Enums.Actions.THROW]}
+        |.
+    li The player can 
+        a(href="/actions/#{Enums.Actions.STEAL}") #{Constants[Enums.Actions.STEAL]}
+        |.
+    li The player can 
+        a(href="/actions/#{Enums.Actions.CATCH}") #{Constants[Enums.Actions.CATCH]}
+        |.
+    li The player can 
+        a(href="/actions/#{Enums.Actions.SLAMBACK}") #{Constants[Enums.Actions.SLAMBACK]}
+        | , when given the opportunity.
+    li The player can not 
+        a(href="/actions/#{Enums.Actions.SLAM}") #{Constants[Enums.Actions.SLAM]}
+        |.
+    li The player can not 
+        a(href="/actions/#{Enums.Actions.STOMP}") #{Constants[Enums.Actions.STOMP]}
+        |.
+    li The player may take neither #{Constants[Enums.Positions.STRIKER]}&ndash; 
+        | nor #{Constants[Enums.Positions.GUARD]}&ndash;specific modifiers or bonuses.
+    li
+        | The player moves like a #{Constants[Enums.Positions.JACK]} (i.e. may only 
+        | move up to 1 hex as part of a #{Constants[Enums.Actions.THROW]} or 
+        | #{Constants[Enums.Actions.STEAL]} action).
+    li The player must attempt to 
+        | #{Constants[Enums.Actions.CATCH]} a scattered ball. If the attempt fails 
+        | then the rush will end.
+    li In any other respect, the player still counds as a #{Constants[Enums.Positions.GUARD]}.

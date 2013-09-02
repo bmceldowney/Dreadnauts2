@@ -22,18 +22,18 @@ define(Enums.Teams.LOCUST_CITY_CHIEFS, 'Locust City Chiefs');
 define(Enums.Teams.PELGAR_MYSTICS, 'Pelgar Mystics');
 define(Enums.Teams.VOID_SIRENS, 'Void Sirens');
 
-define(Enums.Positions.GUARD, 'guard');
-define(Enums.Positions.JACK, 'jack');
-define(Enums.Positions.STRIKER, 'striker');
+define(Enums.Positions.GUARD, 'Guard');
+define(Enums.Positions.JACK, 'Jack');
+define(Enums.Positions.STRIKER, 'Striker');
 
-define(Enums.Races.HUMAN, 'human');
-define(Enums.Races.ORX, 'orx');
-define(Enums.Races.GOBLIN, 'goblin');
-define(Enums.Races.VEERMYN, 'veer-myn');
-define(Enums.Races.FORGEFATHER, 'forge father');
-define(Enums.Races.ROBOT, 'robot');
-define(Enums.Races.ZZOR, 'z\'zor');
-define(Enums.Races.JUDWAN, 'judwan');
+define(Enums.Races.HUMAN, 'Human');
+define(Enums.Races.ORX, 'Orx');
+define(Enums.Races.GOBLIN, 'Goblin');
+define(Enums.Races.VEERMYN, 'Veer-Myn');
+define(Enums.Races.FORGEFATHER, 'Forge Father');
+define(Enums.Races.ROBOT, 'Robot');
+define(Enums.Races.ZZOR, 'Z\'zor');
+define(Enums.Races.JUDWAN, 'Judwan');
 
 define(Enums.Actions.RUN, 'Run');
 define(Enums.Actions.SPRINT, 'Sprint');

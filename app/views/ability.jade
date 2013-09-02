@@ -12,11 +12,11 @@ block content
                     -var hasNext = Constants[ability + 1];
                     section.ability
                         if Constants[ability]
-                            div.clearfix
+                            ul.pager
                                 if hasPrev
-                                    div.pull-left: a(href="/abilities/#{[ability - 1]}") &laquo; #{Constants[ability - 1]}
+                                    li.previous: a(href="/abilities/#{[ability - 1]}") &laquo; #{Constants[ability - 1]}
                                 if hasNext
-                                    div.pull-right: a(href="/abilities/#{[ability + 1]}") #{Constants[ability + 1]} &raquo;
+                                    li.next: a(href="/abilities/#{[ability + 1]}") #{Constants[ability + 1]} &raquo;
                             h2 #{Constants[ability]}
                             !{description}
                         else
