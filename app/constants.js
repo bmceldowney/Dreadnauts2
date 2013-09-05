@@ -58,6 +58,9 @@ define(Enums.Actions.PUNT, 'Punt');
 define(Enums.Actions.ROLL, 'Roll');
 define(Enums.Actions.TRANSFORM, 'Transform');
 define(Enums.Actions.FEINT, 'Feint');
+define(Enums.Actions.REF_CHECK, 'Ref Check');
+define(Enums.Actions.STALL, 'Stall');
+define(Enums.Actions.SNEAK, 'Sneak');
 
 define(Enums.Abilities.SAFE_PAIR_OF_HANDS, 'A Safe Pair of Hands');
 define(Enums.Abilities.BACKFLIP, 'Backflip');

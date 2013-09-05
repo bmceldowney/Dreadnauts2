@@ -1,0 +1,44 @@
+h4 Any player
+p
+    | #{Constants[Enums.Actions.DISTRACT_THE_REF]} is a type of 
+    a(href="/actions/#{Enums.Actions.RUN}") #{Constants[Enums.Actions.RUN]} 
+    | or
+    a(href="/actions/#{Enums.Actions.SPRINT}") #{Constants[Enums.Actions.SPRINT]}
+    | . The player attempting to #{Constants[Enums.Actions.DISTRACT_THE_REF]}
+    | must move adjacent to the Ref using the normal rules. Both players will roll 
+    | a 4+ test: One for the player attempting the action, and one for the ref. 
+
+h5 #{Constants[Enums.Actions.DISTRACT_THE_REF]} is a 3 dice 4+ test (1)
+ul
+    li +1 if the player is a #{Constants[Enums.Positions.GUARD]}.
+
+h5 Remain Calm is a 3 dice 4+ test (1)
+ul
+    li 
+        | -1 per player from the distracting player's team threatening the hex the 
+        | ref is in (ignoring the distracting player, maximum of -2).
+
+table.table.table-striped
+    tr
+        td Draw or #{Constants[Enums.Actions.DISTRACT_THE_REF]} succeeds.
+        td 
+            | The Ref focuses entirely on the distracting player. For the rest of 
+            | the rush the Ref will only roll dice in a Ref check against the 
+            | distracting player. After this rush, the Ref will return to normal. 
+            | Roll a 
+            a(href="/actions/#{Enums.Actions.REF_CHECK}") #{Constants[Enums.Actions.REF_CHECK]} 
+            | against the distracting player immediately, but do not add a die for 
+            | the Eye.
+    tr
+        td #{Constants[Enums.Actions.DISTRACT_THE_REF]} doubles
+        td 
+            | As above, but the distracting player is so convincing that no ref check 
+            | is made against them.
+    tr
+        td Remain Calm succeeds.
+        td 
+            | The Ref is unimpressed. Roll a normal #{Constants[Enums.Actions.REF_CHECK]}
+            | against the distracting player immediately.
+    tr
+        td Remain Calm doubles.
+        td The distracting player is sent off for the rest of the match.

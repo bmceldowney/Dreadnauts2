@@ -1,0 +1,30 @@
+h4 #{Constants[Enums.Positions.GUARD]} or #{Constants[Enums.Positions.JACK]} only
+p
+    | A player may #{Constants[Enums.Actions.SLAMBACK]} in response to a 
+    a(href="/actions/#{Enums.Actions.SLAM}") #{Constants[Enums.Actions.SLAM]} 
+    | or  
+    a(href="/actions/#{Enums.Actions.STEAL}") #{Constants[Enums.Actions.STEAL]} 
+    | attempt carried out against them by an opposing player.
+
+h5 #{Constants[Enums.Actions.SLAMBACK]} is a 3 dice Strength test (1)
+ul
+    li +1 if the player is a #{Constants[Enums.Positions.GUARD]}.
+    li -1 per opposing player threatening the hex the player is in (maximum of -2).
+
+table.table.table-striped
+    tr
+        td #{Constants[Enums.Actions.SLAMBACK]} succeeds
+        td 
+            | The target is pushed into one of the 3 hexes directly away from the player. 
+            | The winning player chooses which hex the target is pushed into, and 
+            | may follow into the vacated hex if they choose to do so. The target 
+            | is turned to directly face the hex that was vacated. The winning player 
+            | is turned to face the target (if they followed up) or the vacated hex.
+    tr
+        td #{Constants[Enums.Actions.SLAMBACK]} doubles
+        td
+            | The target is also knocked down, and must make an 
+            a(href="/actions/#{Enums.Actions.ARMOR_CHECK}") #{Constants[Enums.Actions.ARMOR_CHECK]} 
+            | against the difference in the number of successes between both players'
+            | rolls (e.g. If the winning roll was 3 and the target's roll was 1, then 
+            | target player makes a 2 dice #{Constants[Enums.Actions.ARMOR_CHECK]}).

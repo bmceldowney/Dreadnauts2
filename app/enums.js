@@ -76,6 +76,9 @@ exports.Actions.PUNT = 418;
 exports.Actions.ROLL = 419;
 exports.Actions.TRANSFORM = 420;
 exports.Actions.FEINT = 421;
+exports.Actions.REF_CHECK = 422;
+exports.Actions.STALL = 423;
+exports.Actions.SNEAK = 424;
 
 
 /* ABILITIES 500 - 599 */
