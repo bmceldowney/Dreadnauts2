@@ -55,7 +55,6 @@ define(Enums.Actions.STAND_UP, 'Stand Up');
 define(Enums.Actions.SUCKER_PUNCH, 'Sucker Punch');
 define(Enums.Actions.JUMP, 'Jump');
 define(Enums.Actions.PUNT, 'Punt');
-define(Enums.Actions.ROLL, 'Roll');
 define(Enums.Actions.TRANSFORM, 'Transform');
 define(Enums.Actions.FEINT, 'Feint');
 define(Enums.Actions.REF_CHECK, 'Ref Check');

@@ -1,0 +1,10 @@
+h4 Any player
+p
+    | At the end of any action, if a team has more than 6 players on the pitch 
+    | then it is a #{Constants[Enums.Actions.SNEAK]}.
+p
+    | A #{Constants[Enums.Actions.SNEAK]} is a Foul, and the opposing player 
+    | may make a 
+    a(href="/actions/#{Enums.Actions.REF_CHECK}") #{Constants[Enums.Actions.REF_CHECK]}
+    | . If the #{Constants[Enums.Actions.REF_CHECK]} is successful then a player 
+    | from the offending team is sent off the pitch at random.

@@ -1,0 +1,48 @@
+h4 #{Constants[Enums.Positions.STRIKER]} or #{Constants[Enums.Positions.JACK]} only
+p
+    | Only a player with the  
+    a(href="/actions/#{Enums.Abilities.MISDIRECT}") #{Constants[Enums.Abilities.MISDIRECT]} 
+    | ability may perform a #{Constants[Enums.Actions.FEINT]} action.
+p
+    | The player attempts move an opponent without injuring them.
+    | A #{Constants[Enums.Positions.STRIKER]} may take a full 
+    a(href="/actions/#{Enums.Actions.RUN}") #{Constants[Enums.Actions.RUN]} 
+    | action as part of a #{Constants[Enums.Actions.FEINT]} attempt, and may 
+    a(href="/actions/#{Enums.Actions.DASH}") #{Constants[Enums.Actions.DASH]} 
+    | if they choose to do so.
+    | A #{Constants[Enums.Positions.JACK]} 
+    | may move up to 1 hex before making a #{Constants[Enums.Actions.SLAM]}, turning 
+    | for free if they wish, but may not #{Constants[Enums.Actions.DASH]} 
+    | unless they have the 
+    a(href="/actions/#{Enums.Abilities.SLIDE}") #{Constants[Enums.Abilities.SLIDE]} 
+    | ability.
+
+h5 #{Constants[Enums.Actions.FEINT]} is a 3 dice Speed test (1)
+ul
+    li +1 if the player is a #{Constants[Enums.Races.JUDWAN]}.
+    li +1 if the player began this action while adjacent to the target.
+    li -1 per opposing player threatening the hex the player is in (ignoring the target, maximum of -2).
+
+p
+    | The target may attempt to 
+    a(href="/actions/#{Enums.Actions.DODGE}") #{Constants[Enums.Actions.DODGE]} 
+    | or 
+    a(href="/actions/#{Enums.Actions.SLAMBACK}") #{Constants[Enums.Actions.SLAMBACK]} 
+    | in response to this action.
+
+table.table.table-striped
+    tr
+        td Draw
+        td The players both turn to directly face each other.
+    tr
+        td #{Constants[Enums.Actions.FEINT]} succeeds
+        td 
+            | The winning coach chooses the facing direction of <em>both</em> players. 
+            | This may be the same or different for each player.
+    tr
+        td #{Constants[Enums.Actions.FEINT]} doubles
+        td
+            | The target is also moved 1 hex in any direction by the winning coach. 
+            | The target does not need to make an  
+            a(href="/actions/#{Enums.Actions.EVADE}") #{Constants[Enums.Actions.EVADE]} 
+            | attempt.

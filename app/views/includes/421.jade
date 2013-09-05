@@ -1,0 +1,39 @@
+h4 Any player
+p
+    | A #{Constants[Enums.Actions.REF_CHECK]} is called for when a player commits 
+    | a Foul.
+
+h5 Resolving a #{Constants[Enums.Actions.REF_CHECK]}
+ul
+    li Roll 1 die for the "Eye in the Sky".
+    li 
+        | Roll 1 die for the Ref if they are within 7 hexes of the offending player. 
+        | In the case of a #{Constants[Enums.Actions.SNEAK]} attempt, this may be 
+        | any player from the offending team that is currently on the pitch. Note 
+        | that the Ref has no facing and can see in any direction.
+    li This number may be modified by Event Cards.
+p
+    | Roll all of the dice at once. The dice are rolled by the Coach whose team 
+    | is not under suspicion. Roll each dice separately, then total the dice that 
+    | rolled 1&ndash;3 and consult the following table:
+
+table.table.table-striped
+    tr
+        td Total is 0
+        td The Ref ignores the Foul, and the player remains in play.
+    tr
+        td Total is 1, 2 or 3
+        td The player is sent to the Sin Bin for that many turns.
+    tr
+        td Total is 4+
+        td The player is sent off the pitch for the rest of the match.
+
+p
+    | Note that if more than one Foul needs to be resolved at the same time, then 
+    | they should be resolved in the following order:
+ol
+    li: a(href="/actions/#{Enums.Actions.SUCKER_PUNCH}") #{Constants[Enums.Actions.SUCKER_PUNCH]}
+    li: a(href="/actions/#{Enums.Actions.STOMP}") #{Constants[Enums.Actions.STOMP]}
+    li: a(href="/actions/#{Enums.Actions.STALL}") #{Constants[Enums.Actions.STALL]}
+    li: a(href="/actions/#{Enums.Actions.SNEAK}") #{Constants[Enums.Actions.SNEAK]}
+    li: a(href="/actions/#{Enums.Actions.DISTRACT_THE_REF}") #{Constants[Enums.Actions.DISTRACT_THE_REF]}

@@ -73,12 +73,11 @@ exports.Actions.STAND_UP = 415;
 exports.Actions.SUCKER_PUNCH = 416;
 exports.Actions.JUMP = 417;
 exports.Actions.PUNT = 418;
-exports.Actions.ROLL = 419;
-exports.Actions.TRANSFORM = 420;
-exports.Actions.FEINT = 421;
-exports.Actions.REF_CHECK = 422;
-exports.Actions.STALL = 423;
-exports.Actions.SNEAK = 424;
+exports.Actions.TRANSFORM = 419;
+exports.Actions.FEINT = 420;
+exports.Actions.REF_CHECK = 421;
+exports.Actions.STALL = 422;
+exports.Actions.SNEAK = 423;
 
 
 /* ABILITIES 500 - 599 */
