@@ -13,6 +13,7 @@ p
 h5 #{Constants[Enums.Actions.DODGE]} is a 3 dice Speed test (1)
 ul
     li +1 if the player is a #{Constants[Enums.Positions.STRIKER]}.
+    li -1 if the player is currently on the floor.
     li -1 per opposing player threatening the hex the player is in (maximum of -2).
 
 table.table.table-striped
@@ -24,4 +25,5 @@ table.table.table-striped
         td 
             | The player may move 1 hex in any direction, and does not require an 
             a(href="/actions/#{Enums.Actions.EVADE}") #{Constants[Enums.Actions.EVADE]} 
-            | to do so. The player may turn to face any direction.
+            | to do so. The player may turn to face any direction. If the player was 
+            | on the floor, they remain on the floor.
