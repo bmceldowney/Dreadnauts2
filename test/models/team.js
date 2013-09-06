@@ -32,7 +32,7 @@ describe('Team', function() {
         team.players.should.be.length(0);
         team.add(player);
         team.players.should.be.length(1);
-        team.players[0].should.equal(player);
+        JSON.stringify(team.players[0]).should.equal(JSON.stringify(player));
     });
 
     it('should be able to remove players', function() {

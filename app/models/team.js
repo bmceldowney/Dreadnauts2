@@ -5,7 +5,7 @@ var util = require('util');
 var mongoose = require('mongoose');
 var schema = new mongoose.Schema({
     name: { type: String, default: '' },
-    players: { type: Array, default: [] },
+    players: { type: [Player.schema], default: [] },
     dice: { type: Number, default: 0 },
     cards: { type: Number, default: 0 },
     cash: { type: Number, default: 0 }
