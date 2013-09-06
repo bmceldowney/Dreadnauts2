@@ -1,21 +1,20 @@
 var Enums = require('../enums');
-var hat = require('hat');
+var mongoose = require('mongoose');
+var schema = new mongoose.Schema({
+    name: { type: String, default: 'Nobody...' },
+    race: { type: Number, default: -1 },
+    position: { type: Number, default: -1 },
+    number: { type: String, default: '00' },
+    move: { type: Number, default: -1 },
+    strength: { type: Number, default: -1 },
+    speed: { type: Number, default: -1 },
+    skill: { type: Number, default: -1 },
+    armor: { type: Number, default: -1 },
+    actions: { type: Array, default: [] },
+    abilities: { type: Array, default: [] },
+    cost: { type: Number, default: 0 },
+    experience: { type: Number, default: 0 },
+    rank: { type: Number, default: 1 }
+});
 
-module.exports = exports = function(template) {
-
-    var template = template || {};
-    
-    this.id = template.id || hat();
-    this.name = template.name || 'Nobody...';
-    this.race = template.race || -1;
-    this.position = template.position || -1;
-    this.number = template.number || '00';
-    this.move = template.move || -1;
-    this.strength = template.strength || -1;
-    this.speed = template.speed || -1;
-    this.skill = template.skill || -1;
-    this.armor = template.armor || -1;
-    this.actions = template.actions || [];
-    this.abilities = template.abilities || [];
-    this.cost = template.cost || 0;
-}
+module.exports = exports = mongoose.model('player', schema);

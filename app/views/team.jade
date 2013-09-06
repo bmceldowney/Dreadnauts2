@@ -67,8 +67,8 @@ block content
                                                             span #{player.number}
                                                         td(class="player-position #{Constants[player.position]}")
                                                             span.capitalized #{Constants[player.position]}
-                                                        td.hidden-sm.text-center.player-exp 0
-                                                        td.hidden-sm.text-center.player-rank 1
+                                                        td.hidden-sm.text-center.player-exp= player.experience
+                                                        td.hidden-sm.text-center.player-rank= player.rank
                                                         td.text-center.player-move= player.move
                                                         td.text-center.player-strength= player.strength
                                                         td.text-center.player-speed= player.speed

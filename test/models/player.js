@@ -6,7 +6,7 @@ describe('Player', function() {
     var player = new Player();
 
     it('should have a unique 32-bit id', function() {
-        player.id.should.be.a('string').and.have.property('length', 32);
+        player.id.should.be.a('string').and.have.property('length', 24);
     });
 
     it('should have a name', function() {

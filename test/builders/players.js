@@ -97,15 +97,15 @@ function testPlayerPosition(subject, position) {
         switch (position) {
 
             case Enums.Positions.GUARD:
-                subject.actions.should.equal(Constants.GUARD_ACTIONS);
+                subject.actions.join().should.eql(Constants.GUARD_ACTIONS.join());
                 break;
 
             case Enums.Positions.JACK:
-                subject.actions.should.equal(Constants.JACK_ACTIONS);
+                subject.actions.join().should.eql(Constants.JACK_ACTIONS.join());
                 break;
 
             case Enums.Positions.STRIKER:
-                subject.actions.should.equal(Constants.STRIKER_ACTIONS);
+                subject.actions.join().should.eql(Constants.STRIKER_ACTIONS.join());
                 break;
         }
     });

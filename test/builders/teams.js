@@ -10,7 +10,7 @@ describe('TronTek 49ers', function() {
     testTeam(Teams.build(Enums.Teams.TRONTEK_49ERS), [
         { position: Enums.Positions.GUARD, count: 2, race: Enums.Races.HUMAN },
         { position: Enums.Positions.JACK, count: 3, race: Enums.Races.HUMAN },
-        { position: Enums.Positions.STRIKER, count: 3, race: Enums.Races.HUMAN },
+        { position: Enums.Positions.STRIKER, count: 3, race: Enums.Races.HUMAN }
     ]);
 });
 
@@ -18,7 +18,7 @@ describe('Greenmoon Smackers', function() {
     testTeam(Teams.build(Enums.Teams.GREENMOON_SMACKERS), [
         { position: Enums.Positions.GUARD, count: 3, race: Enums.Races.ORX },
         { position: Enums.Positions.JACK, count: 5, race: Enums.Races.GOBLIN },
-        { position: Enums.Positions.STRIKER, count: 0 },
+        { position: Enums.Positions.STRIKER, count: 0 }
     ]);
 });
 
@@ -26,7 +26,7 @@ describe('Skittersneak Stealers', function() {
     testTeam(Teams.build(Enums.Teams.SKITTERSNEAK_STEALERS), [
         { position: Enums.Positions.GUARD, count: 2, race: Enums.Races.VEERMYN },
         { position: Enums.Positions.JACK, count: 0 },
-        { position: Enums.Positions.STRIKER, count: 6, race: Enums.Races.VEERMYN },
+        { position: Enums.Positions.STRIKER, count: 6, race: Enums.Races.VEERMYN }
     ]);
 });
 
@@ -34,7 +34,7 @@ describe('Midgard Delvers', function() {
     testTeam(Teams.build(Enums.Teams.MIDGARD_DELVERS), [
         { position: Enums.Positions.GUARD, count: 3, race: Enums.Races.FORGEFATHER },
         { position: Enums.Positions.JACK, count: 3, race: Enums.Races.FORGEFATHER },
-        { position: Enums.Positions.STRIKER, count: 2, race: Enums.Races.FORGEFATHER },
+        { position: Enums.Positions.STRIKER, count: 2, race: Enums.Races.FORGEFATHER }
     ]);
 });
 
