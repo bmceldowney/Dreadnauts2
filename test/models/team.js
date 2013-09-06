@@ -8,9 +8,9 @@ describe('Team', function() {
 
     var team = new Team();
 
-    it('should have a unique 32-bit id', function() {
+    it('should have a unique 24-bit id', function() {
         
-        team.id.should.be.a('string').and.have.property('length', 32);
+        team.id.should.be.a('string').and.have.property('length', 24);
 
         for (var i = 0; i < 1000; i++) {
             team.id.should.not.equal(new Team().id);

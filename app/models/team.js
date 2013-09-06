@@ -1,20 +1,17 @@
 var Enums = require('../enums');
 var Constants = require('../constants');
 var Player = require('./player');
-var hat = require('hat');
 var util = require('util');
+var mongoose = require('mongoose');
+var schema = new mongoose.Schema({
+    name: { type: String, default: '' },
+    players: { type: Array, default: [] },
+    dice: { type: Number, default: 0 },
+    cards: { type: Number, default: 0 },
+    cash: { type: Number, default: 0 }
+});
 
-module.exports = exports = function(template) {
-
-    var template = template || {};
-    
-    this.id = template.id || hat();
-    this.name = template.name || '';
-    this.players = [];
-    this.dice = template.dice || 0;
-    this.cards = template.cards || 0;
-    this.cash = template.cash || 0;
-}
+module.exports = exports = mongoose.model('team', schema);
 
 exports.prototype.canAddMorePlayers = function() {
     return this.players.length < Constants.MAX_PLAYERS_PER_TEAM;
