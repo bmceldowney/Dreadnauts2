@@ -1,23 +1,15 @@
-h4 #{Constants[Enums.Positions.STRIKER]} or #{Constants[Enums.Positions.JACK]} only
-p
-    | Only a player with the  
-    a(href="/actions/#{Enums.Abilities.JUMP}") #{Constants[Enums.Abilities.JUMP]} 
-    | ability may perform a #{Constants[Enums.Actions.JUMP]} action.
-p
-    | #{Constants[Enums.Actions.JUMP]} is part of a 
-    a(href="/actions/#{Enums.Actions.RUN}") #{Constants[Enums.Actions.RUN]} 
-    | or 
-    a(href="/actions/#{Enums.Actions.SPRINT}") #{Constants[Enums.Actions.SPRINT]} 
-    | action that allows the player to leap over teammates or opponents. It is a 
-    | 2 hex move (and costs 2 hexes of movement).
+:markdown
 
-h5 #{Constants[Enums.Actions.JUMP]} is a 3 dice Speed test (123)
-ul
-    li +1 if the player is a #{Constants[Enums.Positions.STRIKER]}.
-    li
-        | -1 per opposing player threatening the hex the player is moving
-        strong from
-        | (maximum of -2).
+    #### #{Constants[Enums.Positions.STRIKER]} or #{Constants[Enums.Positions.JACK]} only
+
+    Only a player with the [#{Constants[Enums.Abilities.JUMP]}](/abilities/#{Enums.Abilities.JUMP}) ability may perform a #{Constants[Enums.Actions.JUMP]} action.
+
+    \#{Constants[Enums.Actions.JUMP]} is part of a [#{Constants[Enums.Actions.RUN]}](/actions/#{Enums.Actions.RUN}) or [#{Constants[Enums.Actions.SPRINT]}](/actions/#{Enums.Actions.SPRINT}) action that allows the player to leap over teammates or opponents. It is a 2 hex move (and costs 2 hexes of movement).
+
+    ##### #{Constants[Enums.Actions.JUMP]} is a 3 dice Speed test (123)
+
+    * +1 if the player is a #{Constants[Enums.Positions.STRIKER]}.
+    * -1 per opposing player threatening the hex the player is moving **from** (maximum of -2).
 
 table.table.table-striped
     tr
@@ -35,21 +27,10 @@ table.table.table-striped
             | The player may make another #{Constants[Enums.Actions.JUMP]} attempt 
             | with +1 to the target number of successes.
 
-p
-    | Note that a player falling over as part of a failed #{Constants[Enums.Actions.JUMP]} 
-    | does not have to make an #{Constants[Enums.Actions.ARMORCHECK]} and will not 
-    | be injured. However, if they are carrying the ball then the ball will scatter 
-    | and end the rush.
-p
-    | Also note that a player may need to 
-    a(href="/actions/#{Enums.Actions.DASH}") #{Constants[Enums.Actions.DASH]} 
-    | in order to gain the extra movement to #{Constants[Enums.Actions.JUMP]} into 
-    | a new hex. Roll each test separately. If the player fails any #{Constants[Enums.Actions.DASH]} 
-    | attempts that are required for the #{Constants[Enums.Actions.JUMP]} then they 
-    | will fall over into the hex they were attempting to #{Constants[Enums.Actions.JUMP]} 
-    | into.
-p
-    | A player making a #{Constants[Enums.Actions.JUMP]} does not need to roll an 
-    a(href="/actions/#{Enums.Actions.EVADE}") #{Constants[Enums.Actions.EVADE]} 
-    | for that part of their movement, though they are subject to the normal rules 
-    | both before and after the #{Constants[Enums.Actions.JUMP]} attempt.
+:markdown
+    
+    Note that a player falling over as part of a failed #{Constants[Enums.Actions.JUMP]} does not have to make an #{Constants[Enums.Actions.ARMORCHECK]} and will not be injured. However, if they are carrying the ball then the ball will scatter and end the rush.
+
+    Also note that a player may need to [#{Constants[Enums.Actions.DASH]}](/actions/#{Enums.Actions.DASH}) in order to gain the extra movement to #{Constants[Enums.Actions.JUMP]} into a new hex. Roll each test separately. If the player fails any #{Constants[Enums.Actions.DASH]} attempts that are required for the #{Constants[Enums.Actions.JUMP]} then they will fall over into the hex they were attempting to #{Constants[Enums.Actions.JUMP]} into.
+
+    A player making a #{Constants[Enums.Actions.JUMP]} does not need to roll an [#{Constants[Enums.Actions.EVADE]}](/actions/#{Enums.Actions.EVADE}) for that part of their movement, though they are subject to the normal rules both before and after the #{Constants[Enums.Actions.JUMP]} attempt.

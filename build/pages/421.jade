@@ -1,21 +1,16 @@
-h4 Any player
-p
-    | A #{Constants[Enums.Actions.REFCHECK]} is called for when a player commits 
-    | a Foul.
+:markdown
 
-h5 Resolving a #{Constants[Enums.Actions.REFCHECK]}
-ul
-    li Roll 1 die for the "Eye in the Sky".
-    li 
-        | Roll 1 die for the Ref if they are within 7 hexes of the offending player. 
-        | In the case of a #{Constants[Enums.Actions.SNEAK]} attempt, this may be 
-        | any player from the offending team that is currently on the pitch. Note 
-        | that the Ref has no facing and can see in any direction.
-    li This number may be modified by Event Cards.
-p
-    | Roll all of the dice at once. The dice are rolled by the Coach whose team 
-    | is not under suspicion. Roll each dice separately, then total the dice that 
-    | rolled 1&ndash;3 and consult the following table:
+    #### Any player
+
+    A #{Constants[Enums.Actions.REFCHECK]} is called for when a player commits a Foul.
+
+    ##### Resolving a #{Constants[Enums.Actions.REFCHECK]}
+
+    * Roll 1 die for the "Eye in the Sky".
+    * Roll 1 die for the Ref if they are within 7 hexes of the offending player. In the case of a #{Constants[Enums.Actions.SNEAK]} attempt, this may be any player from the offending team that is currently on the pitch. Note that the Ref has no facing and can see in any direction.
+    * This number may be modified by Event Cards.
+
+    Roll all of the dice at once. The dice are rolled by the Coach whose team is not under suspicion. Roll each dice separately, then total the dice that rolled 1&ndash;3 and consult the following table:
 
 table.table.table-striped
     tr
@@ -28,12 +23,12 @@ table.table.table-striped
         td Total is 4+
         td The player is sent off the pitch for the rest of the match.
 
-p
-    | Note that if more than one Foul needs to be resolved at the same time, then 
-    | they should be resolved in the following order:
-ol
-    li: a(href="/actions/#{Enums.Actions.SUCKERPUNCH}") #{Constants[Enums.Actions.SUCKERPUNCH]}
-    li: a(href="/actions/#{Enums.Actions.STOMP}") #{Constants[Enums.Actions.STOMP]}
-    li: a(href="/actions/#{Enums.Actions.STALL}") #{Constants[Enums.Actions.STALL]}
-    li: a(href="/actions/#{Enums.Actions.SNEAK}") #{Constants[Enums.Actions.SNEAK]}
-    li: a(href="/actions/#{Enums.Actions.DISTRACTTHEREF}") #{Constants[Enums.Actions.DISTRACTTHEREF]}
+:markdown
+
+    Note that if more than one Foul needs to be resolved at the same time, then they should be resolved in the following order:
+
+    1. [#{Constants[Enums.Actions.SUCKERPUNCH]}](/actions/#{Enums.Actions.SUCKERPUNCH})
+    2. [#{Constants[Enums.Actions.STOMP]}](/actions/#{Enums.Actions.STOMP})
+    3. [#{Constants[Enums.Actions.STALL]}](/actions/#{Enums.Actions.STALL})
+    4. [#{Constants[Enums.Actions.SNEAK]}](/actions/#{Enums.Actions.SNEAK})
+    5. [#{Constants[Enums.Actions.DISTRACTTHEREF]}](/actions/#{Enums.Actions.DISTRACTTHEREF}) 

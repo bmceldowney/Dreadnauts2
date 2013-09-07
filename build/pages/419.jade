@@ -1,14 +1,13 @@
-h4 Any player
-p
-    | Only a player with the  
-    a(href="/actions/#{Enums.Abilities.QUICKCHANGEARTIST}") #{Constants[Enums.Abilities.QUICKCHANGEARTIST]} 
-    | ability may perform a #{Constants[Enums.Actions.TRANSFORM]} action.
-p
-    | #{Constants[Enums.Actions.TRANSFORM]} allows a player to change roles on 
-    | the fly. The player spends 1 action per attempt, and may take no other 
-    | action on that attempt.
+:markdown
 
-h5 #{Constants[Enums.Actions.TRANSFORM]} is a 3 dice 4+ test (1)
+    #### Any player
+
+    Only a player with the [#{Constants[Enums.Abilities.QUICKCHANGEARTIST]}](/abilities/#{Enums.Abilities.QUICKCHANGEARTIST}) ability may perform a #{Constants[Enums.Actions.TRANSFORM]} action.
+
+    \#{Constants[Enums.Actions.TRANSFORM]} allows a player to change roles on the fly. The player spends 1 action per attempt, and may take no other action on that attempt.
+
+    ##### #{Constants[Enums.Actions.TRANSFORM]} is a 3 dice 4+ test (1)
+
 table.table.table-striped
     tr
         td #{Constants[Enums.Actions.TRANSFORM]} fails
@@ -27,7 +26,7 @@ table.table.table-striped
         td #{Constants[Enums.Actions.TRANSFORM]} doubles
         td
             | The player immediately changes to any role they choose.
-p
-    | Note that a player must have the 
-    a(href="/actions/#{Enums.Abilities.KEEPER}") #{Constants[Enums.Abilities.KEEPER]} 
-    | ability to change to a #{Constants[Enums.Positions.KEEPER]} role.
+
+:markdown
+
+    Note that a player must have the [#{Constants[Enums.Abilities.KEEPER]}](/abilities/#{Enums.Abilities.KEEPER}) ability to change to a #{Constants[Enums.Positions.KEEPER]} role.

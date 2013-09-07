@@ -1,34 +1,18 @@
-h4 #{Constants[Enums.Positions.STRIKER]} or #{Constants[Enums.Positions.JACK]} only
-p
-    | Only a player with the  
-    a(href="/actions/#{Enums.Abilities.MISDIRECT}") #{Constants[Enums.Abilities.MISDIRECT]} 
-    | ability may perform a #{Constants[Enums.Actions.FEINT]} action.
-p
-    | The player attempts move an opponent without injuring them.
-    | A #{Constants[Enums.Positions.STRIKER]} may take a full 
-    a(href="/actions/#{Enums.Actions.RUN}") #{Constants[Enums.Actions.RUN]} 
-    | action as part of a #{Constants[Enums.Actions.FEINT]} attempt, and may 
-    a(href="/actions/#{Enums.Actions.DASH}") #{Constants[Enums.Actions.DASH]} 
-    | if they choose to do so.
-    | A #{Constants[Enums.Positions.JACK]} 
-    | may move up to 1 hex before making a #{Constants[Enums.Actions.SLAM]}, turning 
-    | for free if they wish, but may not #{Constants[Enums.Actions.DASH]} 
-    | unless they have the 
-    a(href="/actions/#{Enums.Abilities.SLIDE}") #{Constants[Enums.Abilities.SLIDE]} 
-    | ability.
+:markdown
 
-h5 #{Constants[Enums.Actions.FEINT]} is a 3 dice Speed test (1)
-ul
-    li +1 if the player is a #{Constants[Enums.Races.JUDWAN]}.
-    li +1 if the player began this action while adjacent to the target.
-    li -1 per opposing player threatening the hex the player is in (ignoring the target, maximum of -2).
+    #### #{Constants[Enums.Positions.STRIKER]} or #{Constants[Enums.Positions.JACK]} only
 
-p
-    | The target may attempt to 
-    a(href="/actions/#{Enums.Actions.DODGE}") #{Constants[Enums.Actions.DODGE]} 
-    | or 
-    a(href="/actions/#{Enums.Actions.SLAMBACK}") #{Constants[Enums.Actions.SLAMBACK]} 
-    | in response to this action.
+    Only a player with the [#{Constants[Enums.Abilities.MISDIRECT]}](/abilities/#{Enums.Abilities.MISDIRECT}) ability may perform a #{Constants[Enums.Actions.FEINT]} action.
+
+    The player attempts move an opponent without injuring them. A #{Constants[Enums.Positions.STRIKER]} may take a full [#{Constants[Enums.Actions.RUN]}](/actions/#{Enums.Actions.RUN}) action as part of a #{Constants[Enums.Actions.FEINT]} attempt, and may [#{Constants[Enums.Actions.DASH]}](/actions/#{Enums.Actions.DASH}) if they choose to do so. A #{Constants[Enums.Positions.JACK]} may move up to 1 hex before making a #{Constants[Enums.Actions.SLAM]}, turning for free if they wish, but may not #{Constants[Enums.Actions.DASH]} unless they have the [#{Constants[Enums.Abilities.SLIDE]}](/abilities/#{Enums.Abilities.SLIDE}) ability.
+
+    ##### #{Constants[Enums.Actions.FEINT]} is a 3 dice Speed test (1)
+
+    * +1 if the player is a #{Constants[Enums.Races.JUDWAN]}.
+    * +1 if the player began this action while adjacent to the target.
+    * -1 per opposing player threatening the hex the player is in (ignoring the target, maximum of -2).
+
+    The target may attempt to [#{Constants[Enums.Actions.DODGE]}](/actions/#{Enums.Actions.DODGE}) or [#{Constants[Enums.Actions.SLAMBACK]}](/actions/#{Enums.Actions.SLAMBACK}) in response to this action.
 
 table.table.table-striped
     tr
