@@ -6,9 +6,12 @@
 var express = require('express')
   , routes = require('./routes')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , mongoose = require('mongoose');
 
 var app = express();
+
+mongoose.connect('mongodb://localhost/dreadnauts');
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);

@@ -1,4 +1,3 @@
-var Enums = require('../enums');
 var Constants = require('../constants');
 var Player = require('./player');
 var util = require('util');

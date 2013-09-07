@@ -1,4 +1,3 @@
-var Enums = require('../enums');
 var mongoose = require('mongoose');
 var schema = new mongoose.Schema({
     name: { type: String, default: 'Nobody...' },

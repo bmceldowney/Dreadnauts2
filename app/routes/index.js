@@ -1,6 +1,9 @@
+"use strict";
+
 var Enums = require('../enums');
 var Constants = require('../constants');
 var Teams = require('../builders/teams');
+var Page = require('../models/page');
 var jade = require('jade');
 
 function render(res, source, options, callback) {
@@ -25,19 +28,17 @@ exports.teams = function(req, res) {
 exports.actions = function(req, res) {
 
     var id = parseInt(req.params.id);
-    var path = 'includes/' + id;
-
-    render(res, path, {}, function(err, html) {
-        render(res, 'action', { action: id, description: html });
+    
+    Page.findOne({ key: id }, 'html', function(err, result) {
+        render(res, 'action', { action: id, description: result.html });
     });
 };
 
 exports.abilities = function(req, res) {
 
     var id = parseInt(req.params.id);
-    var path = 'includes/' + id;
 
-    render(res, path, {}, function(err, html) {
-        render(res, 'ability', { ability: id, description: html });
+    Page.findOne({ key: id }, 'html', function(err, result) {
+        render(res, 'ability', { ability: id, description: result.html });
     });
 };
