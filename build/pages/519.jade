@@ -1,10 +1,9 @@
-h4 Any #{Constants[Enums.Races.JUDWAN]} player
-p
-    | The player can 
-    a(href="/actions/#{Enums.Actions.THROW}") #{Constants[Enums.Actions.THROW]} 
-    | a maximum range of 12 hexes instead of just 9. This replaces the normal 
-    | distance table used to calculate the number of dice used during a 
-    | #{Constants[Enums.Actions.THROW]} action with the following:
+:markdown
+
+    #### Any #{Constants[Enums.Races.JUDWAN]} player
+
+    The player can [#{Constants[Enums.Actions.THROW]}](/actions/#{Enums.Actions.THROW}) a maximum range of 12 hexes instead of just 9. This replaces the normal distance table used to calculate the number of dice used during a #{Constants[Enums.Actions.THROW]} action with the following:
+
 table.table.table-striped
     tr
         td 1&ndash;4 hexes
@@ -15,8 +14,7 @@ table.table.table-striped
     tr
         td 9&ndash;12 hexes
         td 1 dice
-p
-    strong Important note: 
-    | A player with the #{Constants[Enums.Abilities.LONGARMS]} ability may not 
-    | score bonus points. This means that a successful Strike attempt is worth 1 
-    | or 3 points, regardless of which Strike Hex the attempt was made from.
+
+:markdown
+    
+    **Important note:** A player with the #{Constants[Enums.Abilities.LONGARMS]} ability may not score bonus points. This means that a successful Strike attempt is worth 1 or 3 points, regardless of which Strike Hex the attempt was made from.
