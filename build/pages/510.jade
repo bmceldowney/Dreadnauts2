@@ -1,14 +1,11 @@
-h4 Any player
-p
-	| Whenever a player with this ability is the target of a 
-	a(href="/abilities/#{Enums.Actions.SLAM}") #{Constants[Enums.Actions.SLAM]} 
-	| attempt, they will always 
-	a(href="/abilities/#{Enums.Actions.SLAMBACK}") #{Constants[Enums.Actions.SLAMBACK]}
-	|, even if the #{Constants[Enums.Actions.SLAM]} came from behind.
-ul
-	li The player uses their Speed stat to calculate the number of successes.
-	li The player gets the same number of dice as the attacking player.
-	li No other modifiers are applied to the player's #{Constants[Enums.Actions.SLAMBACK]}.
-p
-	| A player with this ability who makes a #{Constants[Enums.Actions.SLAM]}
-	| attempt does so normally.
+:markdown
+
+    #### Any player
+
+    Whenever a player with this ability is the target of a [#{Constants[Enums.Actions.SLAM]}](/abilities/#{Enums.Actions.SLAM}) attempt, they will always [#{Constants[Enums.Actions.SLAMBACK]}](/abilities/#{Enums.Actions.SLAMBACK}), even if the #{Constants[Enums.Actions.SLAM]} came from behind.
+
+    * The player uses their Speed stat to calculate the number of successes.
+    * The player gets the same number of dice as the attacking player.
+    * No other modifiers are applied to the player's #{Constants[Enums.Actions.SLAMBACK]}.
+
+    A player with this ability who makes a #{Constants[Enums.Actions.SLAM]} attempt does so normally.
