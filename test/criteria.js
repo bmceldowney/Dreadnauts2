@@ -3,15 +3,15 @@ var Criteria = require('../app/criteria');
 var Players = require('../app/builders/players');
 var should = require('should');
 
-var guard = Players.build(Enums.Players.GREENMOON_SMACKERS_GUARD);
-var jack = Players.build(Enums.Players.GREENMOON_SMACKERS_JACK);
-var striker = Players.build(Enums.Players.TRONTEK_49ERS_STRIKER);
-var keeper = Players.build(Enums.Players.GREENMOON_SMACKERS_GUARD);
+var guard = Players.build(Enums.Players.GREENMOONSMACKERSGUARD);
+var jack = Players.build(Enums.Players.GREENMOONSMACKERSJACK);
+var striker = Players.build(Enums.Players.TRONTEK49ERSSTRIKER);
+var keeper = Players.build(Enums.Players.GREENMOONSMACKERSGUARD);
 
 jack.abilities.push(Enums.Abilities.LUCKY);
 
 striker.abilities.push(Enums.Abilities.LUCKY);
-striker.abilities.push(Enums.Abilities.REALLY_LUCKY);
+striker.abilities.push(Enums.Abilities.REALLYLUCKY);
 
 keeper.abilities.push(Enums.Abilities.KEEPER);
 

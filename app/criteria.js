@@ -43,6 +43,6 @@ define('isLucky', exports.isPlayer.and(new Criterion(function(subject) {
 
 define('isReallyLucky', exports.isLucky.and(new Criterion(function(subject) {
     return subject.abilities.some(function(ability) {
-        return ability === Enums.Abilities.REALLY_LUCKY;
+        return ability === Enums.Abilities.REALLYLUCKY;
     });
 })));

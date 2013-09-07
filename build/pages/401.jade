@@ -1,12 +1,7 @@
-h4 Any player
-p
-    | A player may move through a number of unoccupied hexes equal to or 
-    | below 
-    strong twice 
-    | the value of their Move stat. The player may make a 
-    a(href="/actions/#{Enums.Actions.DASH}") #{Constants[Enums.Actions.DASH]} 
-    | attempt if they wish to move further.
-p
-    | During a #{Constants[Enums.Actions.SPRINT]} action, the player may only move 
-    | into the hex directly in front of them. Each 60&deg; turn (one side 
-    | of a hex) the player makes counts as one hex towards their movement.
+:markdown
+    
+    #### Any player
+
+    A player may move through a number of unoccupied hexes equal to or below **twice** the value of their Move stat. The player may make a [#{Constants[Enums.Actions.DASH]}](/actions/#{Enums.Actions.DASH}) attempt if they wish to move further.
+
+    During a #{Constants[Enums.Actions.SPRINT]} action, the player may only move into the hex directly in front of them. Each 60° turn (one side of a hex) the player makes counts as one hex towards their movement.

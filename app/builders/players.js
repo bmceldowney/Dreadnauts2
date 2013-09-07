@@ -10,7 +10,7 @@ module.exports = exports = {
 
         switch (type) {
 
-            case Enums.Players.TRONTEK_49ERS_GUARD:
+            case Enums.Players.TRONTEK49ERSGUARD:
                 result = new Player({
                     race: Enums.Races.HUMAN,
                     position: Enums.Positions.GUARD,
@@ -24,7 +24,7 @@ module.exports = exports = {
                 });
                 break;
 
-            case Enums.Players.TRONTEK_49ERS_JACK:
+            case Enums.Players.TRONTEK49ERSJACK:
                 result = new Player({
                     race: Enums.Races.HUMAN,
                     position: Enums.Positions.JACK,
@@ -38,7 +38,7 @@ module.exports = exports = {
                 });
                 break;
 
-            case Enums.Players.TRONTEK_49ERS_STRIKER:
+            case Enums.Players.TRONTEK49ERSSTRIKER:
                 result = new Player({
                     race: Enums.Races.HUMAN,
                     position: Enums.Positions.STRIKER,
@@ -52,7 +52,7 @@ module.exports = exports = {
                 });
                 break;
 
-            case Enums.Players.GREENMOON_SMACKERS_GUARD:
+            case Enums.Players.GREENMOONSMACKERSGUARD:
                 result = new Player({
                     race: Enums.Races.ORX,
                     position: Enums.Positions.GUARD,
@@ -66,7 +66,7 @@ module.exports = exports = {
                 });
                 break;
 
-            case Enums.Players.GREENMOON_SMACKERS_JACK:
+            case Enums.Players.GREENMOONSMACKERSJACK:
                 result = new Player({
                     race: Enums.Races.GOBLIN,
                     position: Enums.Positions.JACK,
@@ -80,7 +80,7 @@ module.exports = exports = {
                 });
                 break;
 
-            case Enums.Players.SKITTERSNEAK_STEALERS_GUARD:
+            case Enums.Players.SKITTERSNEAKSTEALERSGUARD:
                 result = new Player({
                     race: Enums.Races.VEERMYN,
                     position: Enums.Positions.GUARD,
@@ -94,7 +94,7 @@ module.exports = exports = {
                 });
                 break;
 
-            case Enums.Players.SKITTERSNEAK_STEALERS_STRIKER:
+            case Enums.Players.SKITTERSNEAKSTEALERSSTRIKER:
                 result = new Player({
                     race: Enums.Races.VEERMYN,
                     position: Enums.Positions.STRIKER,
@@ -108,7 +108,7 @@ module.exports = exports = {
                 });
                 break;
 
-            case Enums.Players.MIDGARD_DELVERS_GUARD:
+            case Enums.Players.MIDGARDDELVERSGUARD:
                 result = new Player({
                     race: Enums.Races.FORGEFATHER,
                     position: Enums.Positions.GUARD,
@@ -125,7 +125,7 @@ module.exports = exports = {
                 });
                 break;
 
-            case Enums.Players.MIDGARD_DELVERS_JACK:
+            case Enums.Players.MIDGARDDELVERSJACK:
                 result = new Player({
                     race: Enums.Races.FORGEFATHER,
                     position: Enums.Positions.JACK,
@@ -139,7 +139,7 @@ module.exports = exports = {
                 });
                 break;
 
-            case Enums.Players.MIDGARD_DELVERS_STRIKER:
+            case Enums.Players.MIDGARDDELVERSSTRIKER:
                 result = new Player({
                     race: Enums.Races.FORGEFATHER,
                     position: Enums.Positions.STRIKER,
@@ -153,7 +153,7 @@ module.exports = exports = {
                 });
                 break;
 
-            case Enums.Players.CHROMIUM_CHARGERS_GUARD:
+            case Enums.Players.CHROMIUMCHARGERSGUARD:
                 result = new Player({
                     race: Enums.Races.ROBOT,
                     position: Enums.Positions.GUARD,
@@ -164,13 +164,13 @@ module.exports = exports = {
                     armor: 4,
                     actions: Constants.GUARD_ACTIONS,
                     abilities: [
-                        Enums.Abilities.QUICK_CHANGE_ARTIST
+                        Enums.Abilities.QUICKCHANGEARTIST
                     ]
                 });
                 result.cost = undefined;
                 break;
 
-            case Enums.Players.CHROMIUM_CHARGERS_JACK:
+            case Enums.Players.CHROMIUMCHARGERSJACK:
                 result = new Player({
                     race: Enums.Races.ROBOT,
                     position: Enums.Positions.JACK,
@@ -182,12 +182,12 @@ module.exports = exports = {
                     cost: 14,
                     actions: Constants.JACK_ACTIONS,
                     abilities: [
-                        Enums.Abilities.QUICK_CHANGE_ARTIST
+                        Enums.Abilities.QUICKCHANGEARTIST
                     ]
                 });
                 break;
 
-            case Enums.Players.CHROMIUM_CHARGERS_STRIKER:
+            case Enums.Players.CHROMIUMCHARGERSSTRIKER:
                 result = new Player({
                     race: Enums.Races.ROBOT,
                     position: Enums.Positions.STRIKER,
@@ -198,13 +198,13 @@ module.exports = exports = {
                     armor: 5,
                     actions: Constants.STRIKER_ACTIONS,
                     abilities: [
-                        Enums.Abilities.QUICK_CHANGE_ARTIST
+                        Enums.Abilities.QUICKCHANGEARTIST
                     ]
                 });
                 result.cost = undefined;
                 break;
 
-            case Enums.Players.LOCUST_CITY_CHIEFS_GUARD:
+            case Enums.Players.LOCUSTCITYCHIEFSGUARD:
                 result = new Player({
                     race: Enums.Races.ZZOR,
                     position: Enums.Positions.GUARD,
@@ -216,13 +216,13 @@ module.exports = exports = {
                     cost: 17,
                     actions: Constants.GUARD_ACTIONS,
                     abilities: [
-                        Enums.Abilities.CANT_FEEL_A_THING,
+                        Enums.Abilities.CANTFEELATHING,
                         Enums.Abilities.STEADY
                     ]
                 });
                 break;
 
-            case Enums.Players.LOCUST_CITY_CHIEFS_JACK:
+            case Enums.Players.LOCUSTCITYCHIEFSJACK:
                 result = new Player({
                     race: Enums.Races.ZZOR,
                     position: Enums.Positions.JACK,
@@ -234,13 +234,13 @@ module.exports = exports = {
                     cost: 9,
                     actions: Constants.JACK_ACTIONS,
                     abilities: [
-                        Enums.Abilities.CANT_FEEL_A_THING,
+                        Enums.Abilities.CANTFEELATHING,
                         Enums.Abilities.SLIDE
                     ]
                 });
                 break;
 
-            case Enums.Players.LOCUST_CITY_CHIEFS_STRIKER:
+            case Enums.Players.LOCUSTCITYCHIEFSSTRIKER:
                 result = new Player({
                     race: Enums.Races.ZZOR,
                     position: Enums.Positions.STRIKER,
@@ -252,12 +252,12 @@ module.exports = exports = {
                     cost: 11,
                     actions: Constants.STRIKER_ACTIONS,
                     abilities: [
-                        Enums.Abilities.CANT_FEEL_A_THING
+                        Enums.Abilities.CANTFEELATHING
                     ]
                 });
                 break;
 
-            case Enums.Players.PELGAR_MYSTICS_STRIKER:
+            case Enums.Players.PELGARMYSTICSSTRIKER:
                 result = new Player({
                     race: Enums.Races.JUDWAN,
                     position: Enums.Positions.STRIKER,
@@ -270,13 +270,13 @@ module.exports = exports = {
                     actions: Constants.STRIKER_ACTIONS,
                     abilities: [
                         Enums.Abilities.PACIFIST,
-                        Enums.Abilities.LONG_ARMS,
+                        Enums.Abilities.LONGARMS,
                         Enums.Abilities.MISDIRECT
                     ]
                 });
                 break;
 
-            case Enums.Players.VOID_SIRENS_GUARD:
+            case Enums.Players.VOIDSIRENSGUARD:
                 result = new Player({
                     race: Enums.Races.HUMAN,
                     position: Enums.Positions.GUARD,
@@ -290,7 +290,7 @@ module.exports = exports = {
                 });
                 break;
 
-            case Enums.Players.VOID_SIRENS_JACK:
+            case Enums.Players.VOIDSIRENSJACK:
                 result = new Player({
                     race: Enums.Races.HUMAN,
                     position: Enums.Positions.JACK,
@@ -302,12 +302,12 @@ module.exports = exports = {
                     cost: 9,
                     actions: Constants.JACK_ACTIONS,
                     abilities: [
-                        Enums.Abilities.RUNNING_INTERFERENCE
+                        Enums.Abilities.RUNNINGINTERFERENCE
                     ]
                 });
                 break;
 
-            case Enums.Players.VOID_SIRENS_STRIKER:
+            case Enums.Players.VOIDSIRENSSTRIKER:
                 result = new Player({
                     race: Enums.Races.HUMAN,
                     position: Enums.Positions.STRIKER,

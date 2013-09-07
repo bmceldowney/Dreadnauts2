@@ -1,29 +1,18 @@
-h4 #{Constants[Enums.Positions.STRIKER]}, #{Constants[Enums.Positions.JACK]} or #{Constants[Enums.Positions.KEEPER]} only
-p
-    | A #{Constants[Enums.Actions.CATCH]} attempt is not a deliberate action, 
-    | but a response to either a teammate's 
-    a(href="/actions/#{Enums.Actions.THROW}") #{Constants[Enums.Actions.THROW]} 
-    | action or a scattered or launched ball. A player can make a #{Constants[Enums.Actions.CATCH]} 
-    | attempt only if the ball is coming towards them in their front arc. If a player 
-    | <em>can</em> #{Constants[Enums.Actions.CATCH]} then they <em>must</em> attempt 
-    | a #{Constants[Enums.Actions.CATCH]}.
+:markdown
 
-h5 #{Constants[Enums.Actions.CATCH]} is an (n) dice Skill test (1)
-ul
-    li +1 if the player is a #{Constants[Enums.Positions.STRIKER]}.
-    li -1 if the player is a #{Constants[Enums.Positions.KEEPER]}.
-    li -1 per opposing player threatening the hex the player is in (maximum of -2).
+    #### #{Constants[Enums.Positions.STRIKER]}, #{Constants[Enums.Positions.JACK]} or #{Constants[Enums.Positions.KEEPER]} only
 
-h5 Calculating accuracy
-p
-    | The number of dice rolled (n) during the test is based on the accuracy of 
-    | of the #{Constants[Enums.Actions.THROW]}. The player attempting a 
-    | #{Constants[Enums.Actions.CATCH]} may roll a number of dice equal to the 
-    | number of successes from the previous #{Constants[Enums.Actions.THROW]} 
-    | attempt. If the player is attempting to #{Constants[Enums.Actions.CATCH]} a 
-    | ball that has been scattered or launched, then it counts as an inaccurate 
-    | pass and the player has 0 dice to roll. The player may still gain dice through 
-    | modifiers or coaching dice.
+    A #{Constants[Enums.Actions.CATCH]} attempt is not a deliberate action, but a response to either a teammate's [#{Constants[Enums.Actions.THROW]}](/actions/#{Enums.Actions.THROW}) action or a scattered or launched ball. A player can make a #{Constants[Enums.Actions.CATCH]} attempt only if the ball is coming towards them in their front arc. If a player *can* #{Constants[Enums.Actions.CATCH]} then they *must* attempt a #{Constants[Enums.Actions.CATCH]}.
+
+    ##### #{Constants[Enums.Actions.CATCH]} is an (n) dice Skill test (1)
+
+    * +1 if the player is a #{Constants[Enums.Positions.STRIKER]}.
+    * -1 if the player is a #{Constants[Enums.Positions.KEEPER]}.
+    * -1 per opposing player threatening the hex the player is in (maximum of -2).
+
+    ##### Calculating accuracy
+
+    The number of dice rolled (n) during the test is based on the accuracy of of the #{Constants[Enums.Actions.THROW]}. The player attempting a #{Constants[Enums.Actions.CATCH]} may roll a number of dice equal to the number of successes from the previous #{Constants[Enums.Actions.THROW]} attempt. If the player is attempting to #{Constants[Enums.Actions.CATCH]} a ball that has been scattered or launched, then it counts as an inaccurate pass and the player has 0 dice to roll. The player may still gain dice through modifiers or coaching dice.
 
 table.table.table-striped
     tr

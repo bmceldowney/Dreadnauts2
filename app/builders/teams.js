@@ -11,122 +11,122 @@ module.exports = exports = {
 
         switch(type) {
 
-            case Enums.Teams.TRONTEK_49ERS:
+            case Enums.Teams.TRONTEK49ERS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.TRONTEK_49ERS];
+                result.name = Constants[Enums.Teams.TRONTEK49ERS];
                 result.dice = 1;
                 result.cards = 2;
-                result.add(Players.build(Enums.Players.TRONTEK_49ERS_GUARD, '01'));
-                result.add(Players.build(Enums.Players.TRONTEK_49ERS_GUARD, '02'));
-                result.add(Players.build(Enums.Players.TRONTEK_49ERS_JACK, '03'));
-                result.add(Players.build(Enums.Players.TRONTEK_49ERS_JACK, '04'));
-                result.add(Players.build(Enums.Players.TRONTEK_49ERS_JACK, '05'));
-                result.add(Players.build(Enums.Players.TRONTEK_49ERS_STRIKER, '06'));
-                result.add(Players.build(Enums.Players.TRONTEK_49ERS_STRIKER, '07'));
-                result.add(Players.build(Enums.Players.TRONTEK_49ERS_STRIKER, '08'));
+                result.add(Players.build(Enums.Players.TRONTEK49ERSGUARD, '01'));
+                result.add(Players.build(Enums.Players.TRONTEK49ERSGUARD, '02'));
+                result.add(Players.build(Enums.Players.TRONTEK49ERSJACK, '03'));
+                result.add(Players.build(Enums.Players.TRONTEK49ERSJACK, '04'));
+                result.add(Players.build(Enums.Players.TRONTEK49ERSJACK, '05'));
+                result.add(Players.build(Enums.Players.TRONTEK49ERSSTRIKER, '06'));
+                result.add(Players.build(Enums.Players.TRONTEK49ERSSTRIKER, '07'));
+                result.add(Players.build(Enums.Players.TRONTEK49ERSSTRIKER, '08'));
                 break;
 
-            case Enums.Teams.GREENMOON_SMACKERS:
+            case Enums.Teams.GREENMOONSMACKERS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.GREENMOON_SMACKERS];
+                result.name = Constants[Enums.Teams.GREENMOONSMACKERS];
                 result.dice = 1;
                 result.cards = 1;
-                result.add(Players.build(Enums.Players.GREENMOON_SMACKERS_GUARD, '01'));
-                result.add(Players.build(Enums.Players.GREENMOON_SMACKERS_GUARD, '02'));
-                result.add(Players.build(Enums.Players.GREENMOON_SMACKERS_GUARD, '03'));
-                result.add(Players.build(Enums.Players.GREENMOON_SMACKERS_JACK, '04'));
-                result.add(Players.build(Enums.Players.GREENMOON_SMACKERS_JACK, '05'));
-                result.add(Players.build(Enums.Players.GREENMOON_SMACKERS_JACK, '06'));
-                result.add(Players.build(Enums.Players.GREENMOON_SMACKERS_JACK, '07'));
-                result.add(Players.build(Enums.Players.GREENMOON_SMACKERS_JACK, '08'));
+                result.add(Players.build(Enums.Players.GREENMOONSMACKERSGUARD, '01'));
+                result.add(Players.build(Enums.Players.GREENMOONSMACKERSGUARD, '02'));
+                result.add(Players.build(Enums.Players.GREENMOONSMACKERSGUARD, '03'));
+                result.add(Players.build(Enums.Players.GREENMOONSMACKERSJACK, '04'));
+                result.add(Players.build(Enums.Players.GREENMOONSMACKERSJACK, '05'));
+                result.add(Players.build(Enums.Players.GREENMOONSMACKERSJACK, '06'));
+                result.add(Players.build(Enums.Players.GREENMOONSMACKERSJACK, '07'));
+                result.add(Players.build(Enums.Players.GREENMOONSMACKERSJACK, '08'));
                 break;
 
-            case Enums.Teams.SKITTERSNEAK_STEALERS:
+            case Enums.Teams.SKITTERSNEAKSTEALERS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.SKITTERSNEAK_STEALERS];
+                result.name = Constants[Enums.Teams.SKITTERSNEAKSTEALERS];
                 result.dice = 0;
                 result.cards = 1;
-                result.add(Players.build(Enums.Players.SKITTERSNEAK_STEALERS_GUARD, '01'));
-                result.add(Players.build(Enums.Players.SKITTERSNEAK_STEALERS_GUARD, '02'));
-                result.add(Players.build(Enums.Players.SKITTERSNEAK_STEALERS_STRIKER, '03'));
-                result.add(Players.build(Enums.Players.SKITTERSNEAK_STEALERS_STRIKER, '04'));
-                result.add(Players.build(Enums.Players.SKITTERSNEAK_STEALERS_STRIKER, '05'));
-                result.add(Players.build(Enums.Players.SKITTERSNEAK_STEALERS_STRIKER, '06'));
-                result.add(Players.build(Enums.Players.SKITTERSNEAK_STEALERS_STRIKER, '07'));
-                result.add(Players.build(Enums.Players.SKITTERSNEAK_STEALERS_STRIKER, '08'));
+                result.add(Players.build(Enums.Players.SKITTERSNEAKSTEALERSGUARD, '01'));
+                result.add(Players.build(Enums.Players.SKITTERSNEAKSTEALERSGUARD, '02'));
+                result.add(Players.build(Enums.Players.SKITTERSNEAKSTEALERSSTRIKER, '03'));
+                result.add(Players.build(Enums.Players.SKITTERSNEAKSTEALERSSTRIKER, '04'));
+                result.add(Players.build(Enums.Players.SKITTERSNEAKSTEALERSSTRIKER, '05'));
+                result.add(Players.build(Enums.Players.SKITTERSNEAKSTEALERSSTRIKER, '06'));
+                result.add(Players.build(Enums.Players.SKITTERSNEAKSTEALERSSTRIKER, '07'));
+                result.add(Players.build(Enums.Players.SKITTERSNEAKSTEALERSSTRIKER, '08'));
                 break;
 
-            case Enums.Teams.MIDGARD_DELVERS:
+            case Enums.Teams.MIDGARDDELVERS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.MIDGARD_DELVERS];
+                result.name = Constants[Enums.Teams.MIDGARDDELVERS];
                 result.dice = 1;
                 result.cards = 1;
-                result.add(Players.build(Enums.Players.MIDGARD_DELVERS_GUARD, '01'));
-                result.add(Players.build(Enums.Players.MIDGARD_DELVERS_GUARD, '02'));
-                result.add(Players.build(Enums.Players.MIDGARD_DELVERS_GUARD, '03'));
-                result.add(Players.build(Enums.Players.MIDGARD_DELVERS_JACK, '04'));
-                result.add(Players.build(Enums.Players.MIDGARD_DELVERS_JACK, '05'));
-                result.add(Players.build(Enums.Players.MIDGARD_DELVERS_JACK, '06'));
-                result.add(Players.build(Enums.Players.MIDGARD_DELVERS_STRIKER, '07'));
-                result.add(Players.build(Enums.Players.MIDGARD_DELVERS_STRIKER, '08'));
+                result.add(Players.build(Enums.Players.MIDGARDDELVERSGUARD, '01'));
+                result.add(Players.build(Enums.Players.MIDGARDDELVERSGUARD, '02'));
+                result.add(Players.build(Enums.Players.MIDGARDDELVERSGUARD, '03'));
+                result.add(Players.build(Enums.Players.MIDGARDDELVERSJACK, '04'));
+                result.add(Players.build(Enums.Players.MIDGARDDELVERSJACK, '05'));
+                result.add(Players.build(Enums.Players.MIDGARDDELVERSJACK, '06'));
+                result.add(Players.build(Enums.Players.MIDGARDDELVERSSTRIKER, '07'));
+                result.add(Players.build(Enums.Players.MIDGARDDELVERSSTRIKER, '08'));
                 break;
 
-            case Enums.Teams.CHROMIUM_CHARGERS:
+            case Enums.Teams.CHROMIUMCHARGERS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.CHROMIUM_CHARGERS];
+                result.name = Constants[Enums.Teams.CHROMIUMCHARGERS];
                 result.dice = 1;
                 result.cards = 1;
-                result.add(Players.build(Enums.Players.CHROMIUM_CHARGERS_JACK, '01'));
-                result.add(Players.build(Enums.Players.CHROMIUM_CHARGERS_JACK, '02'));
-                result.add(Players.build(Enums.Players.CHROMIUM_CHARGERS_JACK, '03'));
-                result.add(Players.build(Enums.Players.CHROMIUM_CHARGERS_JACK, '04'));
-                result.add(Players.build(Enums.Players.CHROMIUM_CHARGERS_JACK, '05'));
-                result.add(Players.build(Enums.Players.CHROMIUM_CHARGERS_JACK, '06'));
+                result.add(Players.build(Enums.Players.CHROMIUMCHARGERSJACK, '01'));
+                result.add(Players.build(Enums.Players.CHROMIUMCHARGERSJACK, '02'));
+                result.add(Players.build(Enums.Players.CHROMIUMCHARGERSJACK, '03'));
+                result.add(Players.build(Enums.Players.CHROMIUMCHARGERSJACK, '04'));
+                result.add(Players.build(Enums.Players.CHROMIUMCHARGERSJACK, '05'));
+                result.add(Players.build(Enums.Players.CHROMIUMCHARGERSJACK, '06'));
                 break;
 
-            case Enums.Teams.LOCUST_CITY_CHIEFS:
+            case Enums.Teams.LOCUSTCITYCHIEFS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.LOCUST_CITY_CHIEFS];
+                result.name = Constants[Enums.Teams.LOCUSTCITYCHIEFS];
                 result.dice = 1;
                 result.cards = 1;
-                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_GUARD, '01'));
-                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_JACK, '02'));
-                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_JACK, '03'));
-                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_JACK, '04'));
-                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_JACK, '05'));
-                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_JACK, '06'));
-                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_STRIKER, '07'));
-                result.add(Players.build(Enums.Players.LOCUST_CITY_CHIEFS_STRIKER, '08'));
+                result.add(Players.build(Enums.Players.LOCUSTCITYCHIEFSGUARD, '01'));
+                result.add(Players.build(Enums.Players.LOCUSTCITYCHIEFSJACK, '02'));
+                result.add(Players.build(Enums.Players.LOCUSTCITYCHIEFSJACK, '03'));
+                result.add(Players.build(Enums.Players.LOCUSTCITYCHIEFSJACK, '04'));
+                result.add(Players.build(Enums.Players.LOCUSTCITYCHIEFSJACK, '05'));
+                result.add(Players.build(Enums.Players.LOCUSTCITYCHIEFSJACK, '06'));
+                result.add(Players.build(Enums.Players.LOCUSTCITYCHIEFSSTRIKER, '07'));
+                result.add(Players.build(Enums.Players.LOCUSTCITYCHIEFSSTRIKER, '08'));
                 break;
 
-            case Enums.Teams.PELGAR_MYSTICS:
+            case Enums.Teams.PELGARMYSTICS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.PELGAR_MYSTICS];
+                result.name = Constants[Enums.Teams.PELGARMYSTICS];
                 result.dice = 0;
                 result.cards = 1;
-                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '01'));
-                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '02'));
-                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '03'));
-                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '04'));
-                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '05'));
-                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '06'));
-                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '07'));
-                result.add(Players.build(Enums.Players.PELGAR_MYSTICS_STRIKER, '08'));
+                result.add(Players.build(Enums.Players.PELGARMYSTICSSTRIKER, '01'));
+                result.add(Players.build(Enums.Players.PELGARMYSTICSSTRIKER, '02'));
+                result.add(Players.build(Enums.Players.PELGARMYSTICSSTRIKER, '03'));
+                result.add(Players.build(Enums.Players.PELGARMYSTICSSTRIKER, '04'));
+                result.add(Players.build(Enums.Players.PELGARMYSTICSSTRIKER, '05'));
+                result.add(Players.build(Enums.Players.PELGARMYSTICSSTRIKER, '06'));
+                result.add(Players.build(Enums.Players.PELGARMYSTICSSTRIKER, '07'));
+                result.add(Players.build(Enums.Players.PELGARMYSTICSSTRIKER, '08'));
                 break;
 
-            case Enums.Teams.VOID_SIRENS:
+            case Enums.Teams.VOIDSIRENS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.VOID_SIRENS];
+                result.name = Constants[Enums.Teams.VOIDSIRENS];
                 result.dice = 4;
                 result.cards = 0;
-                result.add(Players.build(Enums.Players.VOID_SIRENS_GUARD, '01'));
-                result.add(Players.build(Enums.Players.VOID_SIRENS_JACK, '02'));
-                result.add(Players.build(Enums.Players.VOID_SIRENS_JACK, '03'));
-                result.add(Players.build(Enums.Players.VOID_SIRENS_JACK, '04'));
-                result.add(Players.build(Enums.Players.VOID_SIRENS_JACK, '05'));
-                result.add(Players.build(Enums.Players.VOID_SIRENS_STRIKER, '06'));
-                result.add(Players.build(Enums.Players.VOID_SIRENS_STRIKER, '07'));
-                result.add(Players.build(Enums.Players.VOID_SIRENS_STRIKER, '08'));
+                result.add(Players.build(Enums.Players.VOIDSIRENSGUARD, '01'));
+                result.add(Players.build(Enums.Players.VOIDSIRENSJACK, '02'));
+                result.add(Players.build(Enums.Players.VOIDSIRENSJACK, '03'));
+                result.add(Players.build(Enums.Players.VOIDSIRENSJACK, '04'));
+                result.add(Players.build(Enums.Players.VOIDSIRENSJACK, '05'));
+                result.add(Players.build(Enums.Players.VOIDSIRENSSTRIKER, '06'));
+                result.add(Players.build(Enums.Players.VOIDSIRENSSTRIKER, '07'));
+                result.add(Players.build(Enums.Players.VOIDSIRENSSTRIKER, '08'));
                 break;
         }
         return result;

@@ -1,20 +1,14 @@
-h4 Any player
-p
-    | A player may #{Constants[Enums.Actions.DODGE]} in response to a 
-    a(href="/actions/#{Enums.Actions.SLAM}") #{Constants[Enums.Actions.SLAM]}
-    | , 
-    a(href="/actions/#{Enums.Actions.STOMP}") #{Constants[Enums.Actions.STOMP]}
-    | , 
-    a(href="/actions/#{Enums.Actions.STEAL}") #{Constants[Enums.Actions.STEAL]} 
-    | or 
-    a(href="/actions/#{Enums.Actions.THROW}") #{Constants[Enums.Actions.THROW]} 
-    | attempt carried out against them by an opposing player.
+:markdown
 
-h5 #{Constants[Enums.Actions.DODGE]} is a 3 dice Speed test (1)
-ul
-    li +1 if the player is a #{Constants[Enums.Positions.STRIKER]}.
-    li -1 if the player is currently on the floor.
-    li -1 per opposing player threatening the hex the player is in (maximum of -2).
+    #### Any player
+
+    A player may #{Constants[Enums.Actions.DODGE]} in response to a [#{Constants[Enums.Actions.SLAM]}](/actions/#{Enums.Actions.SLAM}), [#{Constants[Enums.Actions.STOMP]}](/actions/#{Enums.Actions.STOMP}), [#{Constants[Enums.Actions.STEAL]}](/actions/#{Enums.Actions.STEAL}) or [#{Constants[Enums.Actions.THROW]}](/actions/#{Enums.Actions.THROW}) attempt carried out against them by an opposing player.
+
+    ##### #{Constants[Enums.Actions.DODGE]} is a 3 dice Speed test (1)
+
+    * +1 if the player is a #{Constants[Enums.Positions.STRIKER]}.
+    * -1 if the player is currently on the floor.
+    * -1 per opposing player threatening the hex the player is in (maximum of -2).
 
 table.table.table-striped
     tr

@@ -6,52 +6,52 @@ var should = require('should');
 var util = require('util');
 
 describe('TronTek 49ers Guard', function() {
-    var subject = Players.build(Enums.Players.TRONTEK_49ERS_GUARD);
+    var subject = Players.build(Enums.Players.TRONTEK49ERSGUARD);
     testPlayer(subject, Enums.Races.HUMAN, Enums.Positions.GUARD, 5, 4, 4, 4, 4);
 });
 
 describe('TronTek 49ers Jack', function() {
-    var subject = Players.build(Enums.Players.TRONTEK_49ERS_JACK);
+    var subject = Players.build(Enums.Players.TRONTEK49ERSJACK);
     testPlayer(subject, Enums.Races.HUMAN, Enums.Positions.JACK, 5, 4, 4, 4, 4);
 });
 
 describe('TronTek 49ers Striker', function() {
-    var subject = Players.build(Enums.Players.TRONTEK_49ERS_STRIKER);
+    var subject = Players.build(Enums.Players.TRONTEK49ERSSTRIKER);
     testPlayer(subject, Enums.Races.HUMAN, Enums.Positions.STRIKER, 5, 4, 4, 4, 5);
 });
 
 describe('Greenmoon Smackers Guard', function() {
-    var subject = Players.build(Enums.Players.GREENMOON_SMACKERS_GUARD);
+    var subject = Players.build(Enums.Players.GREENMOONSMACKERSGUARD);
     testPlayer(subject, Enums.Races.ORX, Enums.Positions.GUARD, 5, 3, 4, 5, 4);
 });
 
 describe('Greenmoon Smackers Jack', function() {
-    var subject = Players.build(Enums.Players.GREENMOON_SMACKERS_JACK);
+    var subject = Players.build(Enums.Players.GREENMOONSMACKERSJACK);
     testPlayer(subject, Enums.Races.GOBLIN, Enums.Positions.JACK, 5, 5, 3, 4, 4);
 });
 
 describe('Greenmoon Smackers Striker', function() {
-    var subject = Players.build(Enums.Players.GREENMOON_SMACKERS_STRIKER);
+    var subject = Players.build(Enums.Players.GREENMOONSMACKERSSTRIKER);
     testPlayer(subject, null);
 });
 
 describe('Skittersneak Stealers Guard', function() {
-    var subject = Players.build(Enums.Players.SKITTERSNEAK_STEALERS_GUARD);
+    var subject = Players.build(Enums.Players.SKITTERSNEAKSTEALERSGUARD);
     testPlayer(subject, Enums.Races.VEERMYN, Enums.Positions.GUARD, 6, 4, 3, 5, 4);
 });
 
 describe('Skittersneak Stealers Jack', function() {
-    var subject = Players.build(Enums.Players.SKITTERSNEAK_STEALERS_JACK);
+    var subject = Players.build(Enums.Players.SKITTERSNEAKSTEALERSJACK);
     testPlayer(subject, null);
 });
 
 describe('Skittersneak Stealers Striker', function() {
-    var subject = Players.build(Enums.Players.SKITTERSNEAK_STEALERS_STRIKER);
+    var subject = Players.build(Enums.Players.SKITTERSNEAKSTEALERSSTRIKER);
     testPlayer(subject, Enums.Races.VEERMYN, Enums.Positions.STRIKER, 6, 4, 3, 5, 5);
 });
 
 describe('Midgard Delvers Guard', function() {
-    var subject = Players.build(Enums.Players.MIDGARD_DELVERS_GUARD);
+    var subject = Players.build(Enums.Players.MIDGARDDELVERSGUARD);
     testPlayer(subject, Enums.Races.FORGEFATHER, Enums.Positions.GUARD, 4, 3, 5, 4, 4);
     it('should have the "steady" ability', function() {
         subject.abilities.should.include(Enums.Abilities.STEADY);
@@ -59,12 +59,12 @@ describe('Midgard Delvers Guard', function() {
 });
 
 describe('Midgard Delvers Jack', function() {
-    var subject = Players.build(Enums.Players.MIDGARD_DELVERS_JACK);
+    var subject = Players.build(Enums.Players.MIDGARDDELVERSJACK);
     testPlayer(subject, Enums.Races.FORGEFATHER, Enums.Positions.JACK, 4, 3, 5, 4, 4);
 });
 
 describe('Midgard Delvers Striker', function() {
-    var subject = Players.build(Enums.Players.MIDGARD_DELVERS_STRIKER);
+    var subject = Players.build(Enums.Players.MIDGARDDELVERSSTRIKER);
     testPlayer(subject, Enums.Races.FORGEFATHER, Enums.Positions.STRIKER, 4, 3, 5, 4, 5);
 });
 
