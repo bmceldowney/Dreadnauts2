@@ -25,23 +25,13 @@ exports.teams = function(req, res) {
     render(res, 'team', { team: team });
 };
 
-exports.actions = function(req, res) {
-
-    var id = parseInt(req.params.id);
-    
-    Page.findOne({ key: id }, 'html', function(err, result) {
-        result = result || { html: '' };
-        render(res, 'action', { action: id, description: result.html });
-    });
-};
-
-exports.abilities = function(req, res) {
+exports.page = function(req, res) {
 
     var id = parseInt(req.params.id);
 
     Page.findOne({ key: id }, 'html', function(err, result) {
         result = result || { html: '' };
-        render(res, 'ability', { ability: id, description: result.html });
+        render(res, 'page', { key: id, html: result.html });
     });
 };
 

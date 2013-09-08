@@ -8,9 +8,9 @@ block content
             div.row
 
                 div.col-lg-12
-                    section.action
-                        if Constants[action]
-                            h2 #{Constants[action]}
-                            !{description}
+                    section.page
+                        if Constants[key]
+                            h2 #{Constants[key]}
+                            !{html}
                         else
                             include errors/404.jade
