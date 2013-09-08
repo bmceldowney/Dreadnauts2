@@ -2,21 +2,7 @@ extends layout
 
 block content
 
-    div(role="main")
-        div.container
-
-            div.row
-                dl.col-lg-4
-                    dt Teams
-                    each id in Enums.Teams
-                        dd: a(href="/team/#{id}") #{Constants[id]}
-
-                dl.col-lg-4
-                    dt Actions
-                    each id in Enums.Actions
-                        dd: a(href="/actions/#{id}") #{Constants[id]}
-
-                dl.col-lg-4
-                    dt Abilities
-                    each id in Enums.Abilities
-                        dd: a(href="/abilities/#{id}") #{Constants[id]}
+    div(role="main", class="index")
+        // form(role="search", method="GET", action="/search")
+        //    div.form-group
+        //        input(type="text", placeholder="Quicksearch...", name="q").form-control

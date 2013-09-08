@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+    div(role="main")
+        div.container
+
+            div.row
+                
+                div.col-sm-3
+                    h3 Found #{results.length} results
+                    dl
+                        each result in results
+                            dd: a(href="##{result.key}") #{Constants[result.key]}
+                
+                div.col-sm-9
+                    each result in results
+                        a(name="#{result.key}")
+                        div
+                            h3 #{Constants[result.key]}
+                            !{result.html}
