@@ -11,7 +11,7 @@ var express = require('express')
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/dreadnauts');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/dreadnauts');
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);

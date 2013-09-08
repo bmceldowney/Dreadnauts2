@@ -3,18 +3,18 @@
 var fs = require('fs');
 var mongoose = require('mongoose');
 var jade = require('jade');
-var enums = require('../app/enums');
-var constants = require('../app/constants');
+var enums = require(__dirname + '/../app/enums');
+var constants = require(__dirname + '/../app/constants');
 
-var team = require('../app/models/team');
-var teamBuilder = require('../app/builders/teams');
+var team = require(__dirname + '/../app/models/team');
+var teamBuilder = require(__dirname + '/../app/builders/teams');
 var teams = Object.keys(enums.Teams).map(function(key) { return enums.Teams[key]; });
 
-var page = require('../app/models/page');
-var pageBuilder = require('../app/builders/pages');
-var pages = fs.readdirSync('./pages');
+var page = require(__dirname + '/../app/models/page');
+var pageBuilder = require(__dirname + '/../app/builders/pages');
+var pages = fs.readdirSync(__dirname + '/pages');
 
-mongoose.connect('mongodb://localhost/dreadnauts');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/dreadnauts');
 
 team.find().remove(buildNextTeam);
 
@@ -37,7 +37,7 @@ function buildNextPage() {
             Constants: constants
         }
         
-        jade.renderFile('./pages/' + filename, options, function(err, html) {
+        jade.renderFile(__dirname + '/pages/' + filename, options, function(err, html) {
             pageBuilder.build(key, html).save(buildNextPage);
         });
     }
