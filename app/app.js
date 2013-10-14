@@ -19,6 +19,7 @@ app.configure(function(){
   app.set('view engine', 'jade');
   app.use(express.favicon());
   app.use(express.logger('dev'));
+  app.use(express.compress());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
@@ -34,6 +35,9 @@ app.get('/team/:id', routes.teams);
 app.get('/actions/:id', routes.page);
 app.get('/abilities/:id', routes.page);
 app.get('/search', routes.search);
+app.get('/stats', routes.stats);
+
+app.get('/api/stats/games', routes.api.stats.games);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

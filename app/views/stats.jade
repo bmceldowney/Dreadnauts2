@@ -1,0 +1,30 @@
+extends layout
+
+block content
+
+    div(role="main", class="index", ng-controller='StatsCtrl')
+        header.team-selection
+            div(data-team-selector="teams", data-selected-team="selectedTeam")
+            
+        section(class="team-details", ng-show="matchTotal")
+            section.team-stats
+                header
+                    div.detail-label team details
+                    span(class="detail-value", ng-bind="selectedTeam")
+                
+                div.detail-container
+                    div.detail-label matches recorded:
+                    span(class="detail-value", ng-bind="matchTotal")
+                    div.detail-label avg win spread:
+                    span(class="detail-value", ng-bind="totalAvgWinScore")
+                    div.detail-label avg loss spread:
+                    span(class="detail-value", ng-bind="totalAvgLossScore")
+                
+                section.pie-container
+                    div(pie-chart, data-game-data="totalRecordData", data-options="totalRecordOptions")
+                
+                div(class='matchup-data', data-segmented-bar-chart="winLossData", data-selected-matchup="selectedMatchup")
+                
+        section(class="team-details", ng-hide="matchTotal")
+            div no team data available
+        div(data-matchup-details="selectedMatchup")
