@@ -3,3 +3,4 @@ artwork/
 .idea/
 .DS_Store
 *.log
+/dreadnauts

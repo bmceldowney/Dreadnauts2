@@ -5,6 +5,7 @@ var Constants = require('../constants');
 var Teams = require('../builders/teams');
 var Page = require('../models/page');
 var jade = require('jade');
+var fetcher = require('../data/fetcher');
 
 function render(res, source, options, callback) {
 
@@ -42,4 +43,14 @@ exports.search = function(req, res) {
     Page.find({ html: RegExp(query, 'ig') }, function(err, result) {
         render(res, 'search', { results: result, query: query }); 
     });
+}
+
+exports.stats = function(req, res) {
+    render(res, 'stats'); 
+}
+
+exports.api = {};
+exports.api.stats = {};
+exports.api.stats.games = function(req, res){
+    res.json(fetcher.data);
 }

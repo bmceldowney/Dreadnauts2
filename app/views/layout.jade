@@ -1,5 +1,5 @@
 doctype 5
-html
+html(ng-app='app')
   head
     title
     meta(name="MobileOptimized", content="320")
@@ -7,12 +7,15 @@ html
     meta(http-equiv="cleartype", content="on")
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css')
+    link(rel='stylesheet', href='/stylesheets/charts.css')
     link(rel='stylesheet', href='/stylesheets/test01.css')
   body
 
     header.db-navbar.navbar.navbar-inverse(role="header")
         div.navbar-header
-            a(href="/").navbar-brand Dreadnauts
+            a(href="/").navbar-brand Dreadnauts 
+            a(href="/stats").navbar-brand Stats
         ul.nav.navbar-nav.db-navbar-right
             li: a(href="#quicksearch", data-toggle="collapse", data-target="#db-nav-quicksearch").glyphicon.glyphicon-search.collapsed
         form(id="db-nav-quicksearch", role="search", method="GET", action="/search").navbar-form.collapse
@@ -31,7 +34,14 @@ html
                 a(href="http://www.quirkworthy.com/", target="_blank") quirkworthy
 
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
-    script(src='/javascripts/bootstrap.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js')
+    script(src='/javascripts/services/services.js')
+    script(src='/javascripts/directives/directives.js')
+    script(src='/javascripts/directives/charts.js')
+    script(src='/javascripts/controllers/stats.js')
     script(src='/javascripts/main.js')
+    script(src='/javascripts/bootstrap.min.js')
+    script(src='//d3js.org/d3.v3.min.js', charset='utf-8')
+    script(src='//code.jquery.com/ui/1.10.3/jquery-ui.js')
     script
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
