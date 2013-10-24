@@ -14,7 +14,7 @@ angular.module('services').service('filterService', function () {
     return retval;
 });
 
-angular.module('services').service('dataService', ['$http', function ($http) {
+angular.module('services').service('dataService', ['$http', '$rootScope', function ($http, $rootScope) {
     var retval = {};
     var teams = 'veermyn orxgoblins corporation robot zzor female judwan forgefathers asterians nameless teratons zees'.split(' ').sort();
     var data;
@@ -24,17 +24,14 @@ angular.module('services').service('dataService', ['$http', function ($http) {
         draw: [],
         total: []
     }
-
-    retval.getData = function (cb) {
-        $http.get('api/stats/games').success(function (results) {
-            data = results;
-            cb();
-        }).error(function (results) {
-
-        });
-    }
-
     retval.teams = teams;
+
+    $http.get('api/stats/games').success(function (results) {
+        data = results;
+        $rootScope.$broadcast('dataLoaded');
+    }).error(function (results) {
+
+    });
 
     retval.getMatchData = function (team) {
         var retval = [];
@@ -45,7 +42,7 @@ angular.module('services').service('dataService', ['$http', function ($http) {
             if (item === team) {
                 wlData.data = Object.create(emptyMatchup);
             } else {
-                wlData.data = getWinLossData(team, item, data);
+                wlData.data = getWinLossData(team, item);
             }
 
             retval.push(wlData);
@@ -55,8 +52,8 @@ angular.module('services').service('dataService', ['$http', function ($http) {
     }
 
     retval.getCoachData = function () {
-        var coaches = Object.create(null);
-        var coachGames = data.filter(function (item) { return item.homecoach || item.viscoach })
+        var coaches = Object.create({});
+        var coachGames = data.filter(function (item) { return item.homecoach || item.viscoach });
         coachGames.forEach(function (item) {
             var coach;
             if (item.homecoach) {
@@ -68,8 +65,8 @@ angular.module('services').service('dataService', ['$http', function ($http) {
             }
 
             function addCoachData(team, matchData) {
-                coach = item[team + 'coach']
-                if (!coaches[coach]) {
+                coach = item[team + 'coach'];
+                if (!coaches.hasOwnProperty(coach)) {
                     coaches[coach] = {};
                     coaches[coach].matches = [];
                 }
@@ -81,7 +78,7 @@ angular.module('services').service('dataService', ['$http', function ($http) {
         return coaches;
     }
 
-    function getWinLossData(team, vsTeam, data) {
+    function getWinLossData(team, vsTeam) {
         var teamGames = data.filter(function (item) { return (item.hometeam === team || item.visitorsteam === team) && item.valid && item.rulesversion !== 'house' });
         var vsTeamGames = teamGames.filter(function (item) { return (item.hometeam === vsTeam && item.visitorsteam === team) || (item.visitorsteam === vsTeam && item.hometeam === team) });
         return buildTotalChart(team, vsTeam, vsTeamGames);
@@ -126,3 +123,4 @@ angular.module('services').service('dataService', ['$http', function ($http) {
 
     return retval;
 }]);
+
