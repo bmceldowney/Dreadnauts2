@@ -36,6 +36,7 @@ app.get('/actions/:id', routes.page);
 app.get('/abilities/:id', routes.page);
 app.get('/search', routes.search);
 app.get('/stats', routes.stats);
+app.get('/heartbeat', routes.heartbeat);
 
 app.get('/api/stats/games', routes.api.stats.games);
 

@@ -21,6 +21,10 @@ exports.index = function(req, res){
     render(res, 'index');
 };
 
+exports.heartbeat = function(req, res) {
+    res.send(200);
+};
+
 exports.teams = function(req, res) {
     var team = Teams.build(parseInt(req.params.id));
     render(res, 'team', { team: team });
