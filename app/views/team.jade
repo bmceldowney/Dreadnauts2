@@ -9,7 +9,11 @@ block content
 
                 div.col-lg-12
                     unless team
-                        include errors/404.jade
+                        section.team
+                        -each team in  Enums.Teams
+                            ul
+                                a(href='/teams/#{team}')  #{Constants[team]}
+                        // include errors/404.jade
                     else
                         section.team
                             h2= team.name

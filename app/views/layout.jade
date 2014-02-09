@@ -16,6 +16,7 @@ html(ng-app='app')
         div.navbar-header
             a(href="/").navbar-brand Dreadnauts 
             a(href="/stats").navbar-brand Stats
+            a(href="/teams").navbar-brand Teams
         ul.nav.navbar-nav.db-navbar-right
             li: a(href="#quicksearch", data-toggle="collapse", data-target="#db-nav-quicksearch").glyphicon.glyphicon-search.collapsed
         form(id="db-nav-quicksearch", role="search", method="GET", action="/search").navbar-form.collapse
