@@ -70,3 +70,44 @@ angular.module('controllers').controller('StatsCtrl', ['$scope', 'dataService', 
         }
     }
 }]);
+
+angular.module('controllers')
+    .controller('customizeCtrl', ['$scope', '$http', 'staticData', '$document', 
+        function ($scope, $http, staticData, $document) {
+            var teamId = $document[0].URL.split('/').pop();
+            var url = '/teams/' + teamId
+            
+            $http({method: 'GET', url: url, headers: {'Accept': 'application/json'}})
+                .then(function(response){
+                    $scope.team = response.data;
+                    $scope.players = response.data.players;
+                    $scope.cost = calculateCredits($scope.team);
+                });
+                
+            function calculateCredits (team) {
+                var retval = 0;
+                
+                retval += team.dice * 6;
+                retval += team.cards * 10;
+                
+                team.players.forEach(function(player){
+                    retval += player.cost;
+                })
+                
+                return retval;
+            }
+        }]);
+
+angular.module('filters', ['services']);
+
+angular.module('filters').filter('constant', function (staticData) {
+    return function (value) {
+        return value ? staticData.Constants[value] : '';
+    }
+});
+
+angular.module('filters').filter('enum', function (staticData) {
+    return function (value) {
+        return value ? staticData.Enums[value] : '';
+    }
+});

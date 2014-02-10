@@ -1,27 +1,23 @@
 extends layout
 
+
 block content
 
-    div(role="main")
+    div(role="main", ng-controller='customizeCtrl')
         div.container
 
             div.row
 
                 div.col-lg-12
                     unless team
-                        section.team
-                        -each team in  Enums.Teams
-                            ul
-                                a(href='/teams/#{team}')  #{Constants[team]}
-                        //- include errors/404.jade
+                        include errors/404.jade
                     else
-                        a(href='/teams/customize/#{team.teamId}') Customize this team
                         section.team
-                            h2= team.name
+                            a.h2(editable-text='team.name', ng-bind='team.name')
                             div
                                 small #{team.cards} Cards / 
                                 small #{team.dice} Coaching Die / 
-                                small M&#8354; #{team.cash}
+                                small &#8354; {{cost}}M Team Cost
 
                             - var roster = team.players
                             if roster
@@ -69,31 +65,26 @@ block content
                                                 th.text-right
                                                     small.visible-sm M&#8354;
                                                     span.hidden-sm M&#8354;
-                                            -each player in roster
-                                                tbody.player
-                                                    tr.player-stats
-                                                        td 
-                                                            span #{player.number}
-                                                            | &nbsp;
-                                                            span.capitalized #{Constants[player.position]}
-                                                        td
-                                                            span.capitalized= player.name
-                                                        td.hidden-sm.text-center.player-exp= player.experience
-                                                        td.hidden-sm.text-center.player-rank= player.rank
-                                                        td.text-center.player-move= player.move
-                                                        td.text-center.player-strength= player.strength
-                                                        td.text-center.player-speed= player.speed
-                                                        td.text-center.player-skill= player.skill
-                                                        td.text-center.player-armor= player.armor
-                                                        td.text-right.player-value= player.cost
-                                                    tr.player-abilities
-                                                        td(colspan=11): small Abilities:
-                                                            if player.abilities.length > 0
-                                                                each ability, index in player.abilities
-                                                                    if index > 0
-                                                                        |,&nbsp;
-                                                                    else
-                                                                        | &nbsp;
-                                                                    a(href="/abilities/#{ability}") #{Constants[ability]}
-                                                            else
-                                                                em.text-muted &nbsp;None
+                                        tbody.player(ng-repeat='player in players')
+                                            tr.player-stats
+                                                td 
+                                                    span(ng-bind='player.number')
+                                                    | &nbsp;
+                                                    span.capitalized(ng-bind='player.position | constant')
+                                                td
+                                                    a(editable-text='player.name', ng-bind='player.name')
+                                                 td.hidden-sm.text-center.player-exp(ng-bind='player.experience')
+                                                 td.hidden-sm.text-center.player-rank(ng-bind='player.rank')
+                                                 td.text-center.player-move(ng-bind='player.move')
+                                                 td.text-center.player-strength(ng-bind='player.strength')
+                                                 td.text-center.player-speed(ng-bind='player.speed')
+                                                 td.text-center.player-skill(ng-bind='player.skill')
+                                                 td.text-center.player-armor(ng-bind='player.armor')
+                                                 td.text-right.player-value(ng-bind='player.cost')
+                                            tr.player-abilities
+                                                td(colspan=11): small Abilities:&nbsp;
+                                                    span(ng-repeat='ability in player.abilities')
+                                                        a(ng-bind='ability | constant', href="/abilities/{{ability}}")
+                                                        span(ng-hide='(player.abilities.length-$index-1)==0') ,&nbsp;
+                                                    em.text-muted(ng-hide='player.abilities.length')&nbsp;None
+                                                    

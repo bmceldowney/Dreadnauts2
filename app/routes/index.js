@@ -25,9 +25,24 @@ exports.heartbeat = function(req, res) {
     res.send(200);
 };
 
+exports.constants = function(req, res) {
+    res.json({Enums: Enums, Constants: Constants});
+};
+
 exports.teams = function(req, res) {
     var team = Teams.build(parseInt(req.params.id));
-    render(res, 'team', { team: team });
+
+    debugger;
+    if(req.headers['accept'] === 'application/json'){
+        res.json(team);
+    }else{
+        render(res, 'team', { team: team });
+    }
+};
+
+exports.customize = function(req, res) {
+    var team = Teams.build(parseInt(req.params.id));
+    render(res, 'customize', { team: team });
 };
 
 exports.page = function(req, res) {

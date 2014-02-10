@@ -13,7 +13,8 @@ module.exports = exports = {
 
             case Enums.Teams.TRONTEK49ERS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.TRONTEK49ERS];
+                result.teamId = Enums.Teams.TRONTEK49ERS;
+                result.name = Constants[result.teamId];
                 result.dice = 1;
                 result.cards = 2;
                 result.add(Players.build(Enums.Players.TRONTEK49ERSGUARD, '01'));
@@ -28,7 +29,8 @@ module.exports = exports = {
 
             case Enums.Teams.GREENMOONSMACKERS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.GREENMOONSMACKERS];
+                result.teamId = Enums.Teams.GREENMOONSMACKERS;
+                result.name = Constants[result.teamId];
                 result.dice = 1;
                 result.cards = 1;
                 result.add(Players.build(Enums.Players.GREENMOONSMACKERSGUARD, '01'));
@@ -43,7 +45,8 @@ module.exports = exports = {
 
             case Enums.Teams.SKITTERSNEAKSTEALERS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.SKITTERSNEAKSTEALERS];
+                result.teamId = Enums.Teams.SKITTERSNEAKSTEALERS;
+                result.name = Constants[result.teamId];
                 result.dice = 0;
                 result.cards = 1;
                 result.add(Players.build(Enums.Players.SKITTERSNEAKSTEALERSGUARD, '01'));
@@ -58,7 +61,8 @@ module.exports = exports = {
 
             case Enums.Teams.MIDGARDDELVERS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.MIDGARDDELVERS];
+                result.teamId = Enums.Teams.MIDGARDDELVERS;
+                result.name = Constants[result.teamId];
                 result.dice = 1;
                 result.cards = 1;
                 result.add(Players.build(Enums.Players.MIDGARDDELVERSGUARD, '01'));
@@ -73,7 +77,8 @@ module.exports = exports = {
 
             case Enums.Teams.CHROMIUMCHARGERS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.CHROMIUMCHARGERS];
+                result.teamId = Enums.Teams.CHROMIUMCHARGERS;
+                result.name = Constants[result.teamId];
                 result.dice = 1;
                 result.cards = 1;
                 result.add(Players.build(Enums.Players.CHROMIUMCHARGERSJACK, '01'));
@@ -86,7 +91,8 @@ module.exports = exports = {
 
             case Enums.Teams.LOCUSTCITYCHIEFS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.LOCUSTCITYCHIEFS];
+                result.teamId = Enums.Teams.LOCUSTCITYCHIEFS;
+                result.name = Constants[result.teamId];
                 result.dice = 1;
                 result.cards = 1;
                 result.add(Players.build(Enums.Players.LOCUSTCITYCHIEFSGUARD, '01'));
@@ -101,7 +107,8 @@ module.exports = exports = {
 
             case Enums.Teams.PELGARMYSTICS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.PELGARMYSTICS];
+                result.teamId = Enums.Teams.PELGARMYSTICS;
+                result.name = Constants[result.teamId];
                 result.dice = 0;
                 result.cards = 1;
                 result.add(Players.build(Enums.Players.PELGARMYSTICSSTRIKER, '01'));
@@ -116,7 +123,8 @@ module.exports = exports = {
 
             case Enums.Teams.VOIDSIRENS:
                 result = new Team();
-                result.name = Constants[Enums.Teams.VOIDSIRENS];
+                result.teamId = Enums.Teams.VOIDSIRENS;
+                result.name = Constants[result.teamId];
                 result.dice = 4;
                 result.cards = 0;
                 result.add(Players.build(Enums.Players.VOIDSIRENSGUARD, '01'));

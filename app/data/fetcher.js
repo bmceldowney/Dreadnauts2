@@ -3,7 +3,7 @@ var request = require('request');
 var converter = require('./converter');
 
 getData();
-setInterval(getData, (1000 * 60) * 5);
+setInterval(getData, (1000 * 60) * 30);
 
 function getData(){
     request.get('http://db.chezalex.net/dbdatabase.csv', dataRetrieved);

@@ -1,5 +1,16 @@
 ﻿angular.module('services', []);
 
+angular.module('services').service('staticData', ['$http', function ($http) {
+    var retval = {};
+    $http.get('/constants')
+        .then(function (response) {
+            retval.Enums = response.data.Enums;
+            retval.Constants = response.data.Constants;
+        })
+        
+        return retval;
+}]);
+
 angular.module('services').service('filterService', function () {
     var retval = {};
     var categories = 'all official season1 season2 season3 house'.split(' ');

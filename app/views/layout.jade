@@ -10,6 +10,10 @@ html(ng-app='app')
     link(rel='stylesheet', href='//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css')
     link(rel='stylesheet', href='/stylesheets/charts.css')
     link(rel='stylesheet', href='/stylesheets/test01.css')
+    link(rel='stylesheet', href='/stylesheets/xeditable.css')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-route.min.js');
   body
 
     header.db-navbar.navbar.navbar-inverse(role="header")
@@ -34,13 +38,12 @@ html(ng-app='app')
                 | | 
                 a(href="http://www.quirkworthy.com/", target="_blank") quirkworthy
 
-    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
-    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js')
     script(src='/javascripts/services/services.js')
     script(src='/javascripts/directives/directives.js')
     script(src='/javascripts/directives/charts.js')
     script(src='/javascripts/controllers/stats.js')
     script(src='/javascripts/main.js')
     script(src='/javascripts/bootstrap.min.js')
+    script(src='/javascripts/xeditable.min.js')
     script(src='//d3js.org/d3.v3.min.js', charset='utf-8')
     script(src='//code.jquery.com/ui/1.10.3/jquery-ui.js')

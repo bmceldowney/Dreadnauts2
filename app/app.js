@@ -33,6 +33,8 @@ app.configure('development', function(){
 app.get('/', routes.index);
 app.get('/teams', routes.teams);
 app.get('/teams/:id', routes.teams);
+app.get('/teams/customize/:id', routes.customize);
+app.get('/constants', routes.constants);
 app.get('/actions/:id', routes.page);
 app.get('/abilities/:id', routes.page);
 app.get('/search', routes.search);
